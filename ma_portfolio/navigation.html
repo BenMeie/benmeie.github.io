@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--
+    Ben Meier, 29 August 2019 
+    Navigation Icons 
+    Mobile App Design
+    -->
+    <meta charset='utf-8' />
+    <meta name="viewport" content="width=device-width" /> 
+    <title>Navigation Icons</title>
+    <link type='text/css' href="portfolio.css" rel='stylesheet'/>
+    <script type='text/javascript' src='nav.js'></script>
+    <style type='text/css'>
+    /* styles go here */
+        
+        
+        div.light img {
+            background-image: linear-gradient(to top,#0a0,#0e0);
+            background-color: chartreuse;
+            width: 48px;
+            padding: 36px;
+            margin: 8px;
+            border-radius: 16px;
+        }
+        
+        div.dark img {
+            background-image: linear-gradient(to top,#606,#b0b);
+            background-color: purple;
+            width: 48px;
+            padding: 36px;
+            margin: 8px;
+            border-radius: 16px;
+        }
+        
+        div#content {
+            margin: 0 auto;
+            max-width: 600px;
+        }
+        
+        h1 {
+            font-family: "Helvetica Neue", sans-serif;
+            text-align: center;
+        }
+        
+
+    </style>
+</head>
+
+<body>
+    <h1>Navigation Icons</h1>
+    <!-- page content will go here -->
+    <div id='content'>
+    <div class='light'>
+        <img src='navi/black-triangle-left.svg' alt='previous'/>
+        <img src='navi/black-triangle-right.svg' alt='next' />
+        <img src='navi/black-hamburger.svg' alt='menu' />
+        <img src='navi/black-waffle.svg' alt='apps'/>
+        <img src='navi/black-arrow-left.svg' alt='back'/>
+        <img src='navi/black-arrow-right.svg' alt='forward'/>
+        <img src='navi/black-home.svg' alt='home'/>
+        <img src='navi/black-star.svg' alt='favorite'/>
+        <img src='navi/black-arrow-down.svg' alt='down'/>
+        <img src='navi/black-arrow-up.svg' alt='up'/>
+        <img src='navi/black-heart.svg' alt='like'/>
+        <img src='navi/black-heart-filled.svg' alt='liked'/>
+    </div>
+    
+    <div class='dark'>
+        <img src='navi/white-triangle-left.svg' alt='previous'/>
+        <img src='navi/white-triangle-right.svg' alt='next' />
+        <img src='navi/white-hamburger.svg' alt='menu' />
+        <img src='navi/white-waffle.svg' alt='apps'/>
+        <img src='navi/white-arrow-left.svg' alt='back'/>
+        <img src='navi/white-arrow-right.svg' alt='forward'/>
+        <img src='navi/white-home.svg' alt='home'/>
+        <img src='navi/white-star.svg' alt='favorite'/>
+        <img src='navi/white-arrow-down.svg' alt='down'/>
+        <img src='navi/white-arrow-up.svg' alt='up'/>
+        <img src='navi/white-heart.svg' alt='like'/>
+        <img src='navi/white-heart-filled.svg' alt='liked'/>
+    </div>
+    </div>
+    
+    <div class='case_study'>
+    <p><span class='head'>Objective:</span> Create navigation icons in SVG for use on a website. </p>
+    <p><span class='head'>Problem:</span> Users need some way to tell what a buttons will do besides text.</p>
+    <p><span class='head'>Solution:</span> By creating navigation icons in SVG we can provide a more visually pleasing way for users to navigate around the site.</p>
+    </div>
+    
+    <div id='navigation'></div>
+    
+    <footer>Copyright &copy; 2019 Ben Meier</footer>
+    <script type="text/javascript">makenav();
+        
+        </script>
+    <script type='text/javascript'>
+    // scripts will go here
+
+    </script>
+</body>
+</html>

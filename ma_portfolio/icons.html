@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--
+    Ben Meier
+    9 September 2019
+    Company Icons
+    -->
+    <meta charset='utf-8' />
+    <meta name="viewport" content="width=device-width" /> 
+    <title>Icons and Logos</title>
+    <link type='text/css' href="portfolio.css" rel='stylesheet'/>
+    <script type='text/javascript' src='nav.js'></script>
+    <style type='text/css'>
+        img {
+            width: 200px;
+            margin: 8px;
+        }
+        
+        div.container {
+            margin: 0 auto;
+            border-radius: 10px;
+            padding: 2.5em 0;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>Icons and Logos</h1>
+    <h3>(drawn with SVG)</h3>
+    <!-- page content will go here -->
+    <div class='container'>
+    <img src='moreicons/cbs.svg' alt='CBS Logo'/>
+    <img src='moreicons/abc.svg' alt='ABC Logo'/>
+    <img src='moreicons/chrysler.svg' alt='Chrysler Logo'/><br>
+    <img src='moreicons/fbmsg.svg' alt='Facebook Messenger Icon'/>
+    <img src='moreicons/brandwatch.svg' alt='Brandwatch Logo'/>
+    <img src='moreicons/app_store.svg' alt='App Store Icon'/><br>
+    <img src='moreicons/fan.svg' alt='Unknown Fan Icon'/>
+    <img src='moreicons/yeehaw.svg' alt='Unknown Yeehaw Icon'/>
+    <img src='moreicons/safari.svg' alt='Safari Icon'/><br>
+    
+    <img style='width:664px'src='moreicons/svcte_mask.svg' alt='SVCTE Logo Green'/>
+    </div>
+    <div class='case_study'>
+    <p><span class='head'>Objective:</span> Recreate a bunch of company icons with as much precision as possible. </p>
+    <p><span class='head'>Problem:</span> How can we easily make icons that have some amount of symmetry?</p>
+    <p><span class='head'>Solution:</span> We can make only certain parts of the logo, then use <use> to duplicate and rotate it the rest of the way around. This makes the process of creating these logos super fast.</p>
+    </div>
+    
+    <div id='navigation'></div>
+    
+    <footer>Drawn by Ben Meier</footer>
+    <script type="text/javascript">makenav();
+        
+        </script>
+</body>
+</html>

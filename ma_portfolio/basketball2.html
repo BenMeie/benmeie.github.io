@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--
+    YOUR NAME HERE, date, project name, class, etc.
+    -->
+    <meta charset='utf-8' />
+    <meta name="viewport" content="width=device-width" /> 
+    <title>Basketball 2</title>
+    <link type='text/css' href="portfolio.css" rel='stylesheet'/>
+    <script type='text/javascript' src='nav.js'></script>
+    <style type='text/css'>
+        
+        div#controls {
+            margin-bottom: 2em;
+        }
+        
+        div#controls button {
+            width: 50px;
+            height: 50px;
+            background-color: #369;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 1.3em;
+            margin: 3px;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <h1>Basketball 2</h1>
+    
+    <div id='controls'>
+        <button id='slower'>&ndash;</button>
+        <button id='faster'>+</button>
+        <button id='change'>Yes</button>
+        <button class='color yellow'>&nbsp;</button>
+        <button class='color lightgreen'>&nbsp;</button>
+        <button class='color red'>&nbsp;</button>
+        <button class='color violet'>&nbsp;</button>
+        <button class='color pink'>&nbsp;</button>
+        <button class='color orange'>&nbsp;</button>
+        <button class='color coral'>&nbsp;</button>
+        <button class='color cornflowerblue'>&nbsp;</button>
+    </div>
+    
+    <svg width='800' height='600' viewBox='0 0 800 600'
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink= "http://www.w3.org/1999/xlink">
+
+        <!-- Ben Meier
+                23 September 2019-->
+
+        <defs>
+            <clipPath id='ball'>
+                <circle cx='100' cy='100' r='50' fill='orange'/>
+                <radialGradient id='orange' cx='30%' cy='30%' r='70%'>
+                    <stop offset='0' stop-color='white' stop-opacity='0.6'/>
+                    <stop offset='1' stop-color='black' stop-opacity='0.25' />
+                </radialGradient>
+            </clipPath>
+<!--
+            <radialGradient id='orange' cx='30%' cy='30%' r='70%'>
+                <stop offset='0' stop-color='#f90'/>
+                <stop offset='1' stop-color='#b40' />
+            </radialGradient>
+-->
+        </defs>
+
+        <!-- the shapes and stuff will go here -->
+        <rect x='0' y='0' width='800' height='600' fill='#556' />
+
+        <g id='fball'>
+            <circle cx='100' cy='100' r='50' fill='orange' id='disc'/>
+            <polyline points='100 50 100 150' stroke='black'/>
+            <polyline points='50 100 150 100' stroke='black'/>
+            <circle cx='25' cy='100' r='50' fill='none' stroke='black' clip-path="url(#ball)"/>
+            <circle cx='175' cy='100' r='50' fill='none' stroke='black' clip-path="url(#ball)"/>
+        </g>
+        
+        <circle cx='100' cy='100' fill='url(#orange)' id='grad' r='50'/>
+
+    </svg>
+
+    <script type='text/javascript'>
+        
+        var x = 0;
+        var y = 0;
+        var deltax = 1;
+        var deltay = 1;
+        var rot = 0
+        var deltarot = 1.15 * deltax; 
+        var radius = 50;
+        var rotateSpeed = 1
+        var w = document.getElementsByTagName('svg')[0].getAttribute('width');
+        var h = document.getElementsByTagName('svg')[0].getAttribute('height');
+        var ball = document.getElementById('fball');
+        var msec = 10;
+        var colorButtons = document.getElementsByClassName('color');
+        var possibleColors = [
+            "orange","coral","cornflowerblue","pink","violet","red","lightgreen","yellow"
+        ]
+        var willChangeColors = true;
+        var mouseIsDown = false;
+        
+        var interval = setInterval(move, msec);
+        
+        function get(id) { return document.getElementById(id);}
+                
+        setupButtons();
+        
+        get('change').onclick = manageChangeColors;
+        
+        function manageChangeColors(e) {
+            if(willChangeColors){
+                willChangeColors = false;
+                e.currentTarget.textContent = "No";
+            }
+            else {
+                willChangeColors = true;
+                e.currentTarget.textContent = "Yes";
+            }
+        }
+        
+        function setupButtons() {
+            for(var i=0; i<colorButtons.length; i++) {
+                var buttonClass = colorButtons[i].className;
+                var classParts = buttonClass.split(" ");
+                console.log(classParts);
+                colorButtons[i].style.backgroundColor = classParts[1];
+                colorButtons[i].onclick = colorButtonTouched;
+                colorButtons[i].style.borderRadius = '50%'
+            }
+        }
+        
+        function colorButtonTouched(e) {
+            get('disc').setAttribute('fill', e.currentTarget.style.backgroundColor);
+        }
+        
+        function move() {
+            x += deltax;
+            y += deltay;
+            rot += deltarot;
+            var tb = false;
+            var rl = false;
+            //console.log(x, y, rot);
+            if(deltax > 0 && x >= (w-3*radius)) {
+                deltax = -Math.abs(deltax);
+                rl = true;
+            } 
+            else if (deltax < 0 && x <= -radius) {
+                deltax = Math.abs(deltax);
+                rl = true;
+            }
+            
+            if (deltay > 0 && y >= h-3*radius) {
+                deltay = -Math.abs(deltay)
+                tb= true;
+            }
+            else if (deltay < 0 && y <= -radius) {
+                deltay = Math.abs(deltay);
+                tb = true;
+            }
+            
+            if((tb || rl) && willChangeColors) {
+                var randomIndex = Math.floor(Math.random() * possibleColors.length);
+                var randomColor = possibleColors[randomIndex];
+                get('disc').setAttribute('fill', randomColor)
+            }
+            
+            if(tb) {
+                if(deltax*deltay > 0) {
+                    deltarot = -Math.abs(deltarot);
+                }
+                else {
+                    deltarot = Math.abs(deltarot);
+                }
+                tb = false;
+            }
+            
+            if(rl) {
+                if (deltax*deltay > 0) {
+                    deltarot = Math.abs(deltarot);
+                }
+                else {
+                    deltrot = -Math.abs(deltarot);
+                }
+                rl = false;
+            }
+            
+            ball.setAttribute('transform', "translate(" + x + " " + y + ") rotate(" + rot + " 100 100)");
+            document.getElementById('grad').setAttribute('transform', "translate(" + x + " " + y + ")");
+        }
+        
+        get('slower').onclick = goSlower;
+        get('faster').onclick = goFaster;
+        
+        function goSlower(e) {
+            adjustSpeed(0.7);
+        }
+        
+        function goFaster(e) {
+            adjustSpeed(1.4);
+        }
+        
+        function adjustSpeed(f) {
+            //msec /= f;
+            deltax*=f;
+            deltay*=f;
+            deltarot*=f;
+        }
+        
+//        window.onmousedown = mouseDown;
+//        window.onmouseup = mouseUp;
+//        window.onmousemove = mouseMove;
+        
+        document.getElementsByTagName('svg')[0].onmousedown = mouseDown;
+        document.getElementsByTagName('svg')[0].onmouseup = mouseUp;
+        document.getElementsByTagName('svg')[0].onmousemove = mouseMove;
+        
+        function mouseDown(e) {
+            mouseIsDown = true;
+            mouseMove(e);
+        }
+        
+        function mouseUp(e) {
+            mouseMove(e);
+            mouseIsDown = false;
+        }
+        
+        function mouseMove(e) {
+            if(!mouseIsDown) {
+                return;
+            }
+            console.log(e.offsetX, e.offsetY)
+            
+            var currentMagnitude = Math.sqrt(deltax*deltax + deltay*deltay);
+            var newXMagnitude = e.offsetX - x-100;
+            var newYMagnitude = e.offsetY - y-100;
+            var newMagnitude = Math.sqrt(newXMagnitude*newXMagnitude + newYMagnitude*newYMagnitude);
+            
+            deltax = newXMagnitude * currentMagnitude / newMagnitude
+            deltay = newYMagnitude * currentMagnitude / newMagnitude
+            
+            console.log(newXMagnitude, newYMagnitude, deltax, deltay)
+        }
+
+    </script>
+    
+    <div class='case_study'>
+    <p><span class='head'>Objective:</span> Create a basketball that bounces across the screen. Make it so that you can change its color and speed.</p>
+    <p><span class='head'>Problem:</span> How can we change the spin of the ball correctly when it bounces off the walls? How can we allow users to change color and speed?</p>
+    <p><span class='head'>Solution:</span> In order to make sure the rotation of the ball is correct when bouncing off walls, we have to figure out where it’s coming from and then change the direction of its rotation according to that. For user input we can add colored buttons along with a + and - button to allow for speed and color changes. We made sure that the colored buttons represented the color they were changing the basketball to and made sure that they were all big enough to be easily clicked.</p>
+    </div>
+    
+    <div id='navigation'></div>
+    
+    <footer>Copyright &copy; Ben Meier</footer>
+    <script type="text/javascript">makenav();
+        
+        </script>
+</body>
+</html>

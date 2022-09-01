@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--
+    Ben Meier
+    17 September 2019
+    -->
+    <meta charset='utf-8' />
+    <meta name="viewport" content="width=device-width" /> 
+    <title>BMI Calculator</title>
+    <link type='text/css' href="portfolio.css" rel='stylesheet'/>
+    <script type='text/javascript' src='nav.js'></script>
+    <style type='text/css'>
+        
+        #inputs, #results{
+            text-align: left;
+            box-shadow: 2px 2px 5px gray;
+            padding: 1em 1em 1.5em;
+            margin: 2em auto;
+            border-radius: 8px;
+            background-color: #557;
+            max-width: 500px;
+        }
+        
+        #results {
+            text-align: center;
+        }
+        
+        @font-face {
+                font-family: mayden;
+                src: url(http://blocksanity.net/content/fonts/MadeynSans-Semibold.ttf);
+            }
+        
+        label {
+            text-align: right;
+            display: inline-block;
+            width: 47%;
+            margin-right: 8px;
+        }
+        
+        label#E {
+            text-align: right;
+            display: inline-block;
+            width: 85%;
+            margin-right: 8px;
+        }
+        
+        .switcher {
+            margin: 0em 3px 1em;
+            width: 48%;
+            display: inline-block;
+            height: 30px;
+            font-size: 16px;
+            font-family: Futura, sans-serif;
+        }
+        
+        #h3, #inches2 {
+            display: none;
+        }
+        
+
+    </style>
+</head>
+
+<body>
+    <h1>BMI Calculator</h1>
+    <div id='inputs'>
+        <button id='us' class='switcher'>Imperial</button>
+        <button id='es' class='switcher'>Metric</button>
+        <p>
+        <label id='w'>Pounds:</label>
+        <input id='pounds' type='text' size='10'/>
+        </p>
+        <p>
+        <label id='h1'>Feet:</label>
+        <input id='feet' type='text' size='10'/>
+        </p>
+        <p>
+        <label id='h2'>Inches:</label>
+        <input id='inches' type='text' size='10'/>
+        </p>
+        <p>
+            <label></label>
+            <button id='calculate'>Calculate</button>
+        </p>
+    </div>
+    <div id='results'>
+        <span id='result'>Press calculate to get results.</span><br>
+        <span id='text'>&nbsp;</span>
+    </div>
+
+    <script type='text/javascript'>
+        document.getElementById('us').onclick = us;
+        document.getElementById('es').onclick = metric;
+        var calculate = document.getElementById('calculate');
+        calculate.onclick = doBMIA;
+        
+        function doBMIA(e) {
+            var pounds = parseFloat(document.getElementById('pounds').value);
+            var inches = parseInt(document.getElementById('inches').value) + convertInches(parseInt(document.getElementById('feet').value));
+            var bmi = (pounds/Math.pow(inches, 2))*703;
+            
+            
+            document.getElementById('result').textContent = 'Your BMI is ' + bmi.toFixed(2) + '.';
+            getRange(bmi);
+        }
+        
+        function doBMIE(e) {
+            var kilo = parseFloat(document.getElementById('pounds').value);
+            var ceni = parseInt(document.getElementById('feet').value);
+            var bmi = (kilo/Math.pow((ceni/100), 2));
+            
+            
+            document.getElementById('result').textContent = 'Your BMI is ' + bmi.toFixed(2) + '.';
+            getRange(bmi);
+        }
+        
+        function convertInches(feet) {
+            return parseInt(feet) * 12;
+        }
+        
+        function getRange(bmi) {
+            var textResult = document.getElementById('text');
+            bmi = parseFloat(bmi);
+            if(bmi < 18.5) {
+                textResult.textContent = 'Your BMI is too low!';
+            }
+            else if(bmi < 25) {
+                textResult.textContent = 'Your BMI is normal.';
+            }
+            else if(bmi < 30) {
+                textResult.textContent = 'Your BMI is a little high.';
+            }
+            else {
+                textResult.textContent = 'Your BMI is too high!';
+            }
+        }
+        
+        function us(e) {
+            document.getElementById('w').textContent = 'Pounds:';
+            document.getElementById('h1').textContent = 'Feet:';
+            document.getElementById('h3').textContent = 'Inches:';
+            document.getElementById('h3').id = 'h2';
+            document.getElementById('inches2').id = 'inches';
+            document.getElementById('calculateE').id = 'calculate';
+            calculate.onclick = doBMIA;
+        }
+        
+        function metric(e) {
+            document.getElementById('w').textContent = 'Kilograms:';
+            document.getElementById('h1').textContent = 'Centimeters:';
+            document.getElementById('h2').id = 'h3';
+            document.getElementById('inches').id = 'inches2'
+            document.getElementById('calculate').id = 'calculateE';
+            calculate.onclick = doBMIE;
+        }
+
+    </script>
+    
+     <div class='case_study'>
+    <p><span class='head'>Objective:</span> Create a simple website for calculating your BMI with JavaScript.</p>
+    <p><span class='head'>Problem:</span> How do we help users understand what the numbers mean for their health?</p>
+    <p><span class='head'>Solution:</span> In order to help people understand what the numbers actually mean, we can display a message along side the results when they are calculated. The message is a translation of the word definition of the name.</p>
+    </div>
+    
+    <div id='navigation'></div>
+    
+    <footer>Copyright &copy; Ben Meier</footer>
+    <script type="text/javascript">makenav();
+        
+        </script>
+</body>
+</html>
