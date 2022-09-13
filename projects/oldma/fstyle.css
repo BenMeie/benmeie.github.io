@@ -1,0 +1,25 @@
+h1 {
+    font-family: mayden;
+    background-color: crimson;
+    font-weight: 700;
+    padding: 20px 100px 20px 100px;
+    text-align: center;
+    border: 5px solid orange
+}
+
+@font-face {
+    font-family: mayden;
+    src: url(http://blocksanity.net/content/fonts/MadeynSans-Semibold.ttf);
+}
+
+p {
+    color: orangered;
+}
+
+a {
+    padding: 100px
+}
+
+html {
+    background-color: #dfdf;
+}

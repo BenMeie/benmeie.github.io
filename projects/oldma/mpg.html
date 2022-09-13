@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--
+    Ben Meier
+    17 September 2019
+    -->
+    <meta charset='utf-8' />
+    <meta name="viewport" content="width=device-width" /> 
+    <title>MPG Calculator</title>
+    <style type='text/css'>
+    
+        body {
+            text-align: center;
+            font-family: 'mayden', Futura, sans-serif;
+            background-color: #f0f9ff;
+        }
+        
+        #inputs{
+            text-align: left;
+            box-shadow: 2px 2px 5px gray;
+            padding: 2.2em 1em;
+            margin: 2em auto;
+            border-radius: 8px;
+            background-color: #acf;
+            max-width: 400px;
+            min-width: 330px;
+        }
+        
+        @font-face {
+                font-family: mayden;
+                src: url(http://blocksanity.net/content/fonts/MadeynSans-Semibold.ttf);
+            }
+        
+        label {
+            text-align: right;
+            display: inline-block;
+            width: 48%;
+            margin-right: 15px;
+        }
+    
+        footer {
+            margin: 1.3em;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>Gas Mileage Calculator</h1>
+    <div id='inputs'>
+        <p>
+        <label>Starting mileage:</label>
+        <input id='start' type='text'/>
+        </p>
+        <p>
+        <label>Ending mileage:</label>
+        <input id='end' type='text'/>
+        </p>
+        <p>
+        <label>Gallons Used:</label>
+        <input id='gallons' type='text'/>
+        </p>
+        <p>
+            <label>Miles per Gallon:</label>
+            <input id='mpg' type='text' disabled='disabled'/>
+        </p>
+    </div>
+
+    <script type='text/javascript'>
+        document.getElementById('start').oninput = calc;
+        document.getElementById('end').oninput = calc;
+        document.getElementById('gallons').oninput = calc;
+        
+        function calc(e) {
+            var startm = parseInt(document.getElementById('start').value);
+            var endm = parseInt(document.getElementById('end').value);
+            var gallons = parseInt(document.getElementById('gallons').value);
+            var mpg = (endm-startm)/gallons;
+            
+            if(mpg >= 0 || !isNaN(mpg)) {
+                document.getElementById('mpg').value = mpg.toFixed(2);
+            }
+        }
+        
+    </script>
+    <footer>Copyright &copy; Ben Meier</footer>
+</body>
+</html>

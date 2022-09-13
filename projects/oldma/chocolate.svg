@@ -1,0 +1,139 @@
+<svg width='600' height='800' viewBox='0 0 600 800'
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink= "http://www.w3.org/1999/xlink">
+
+    <!--Ben Meier
+        30 August 2019-->
+    
+    <!-- the clipping paths and masks will go here -->
+
+    <defs>
+        <radialGradient id='red' cx='30%' cy='30%' r='70%'>
+            <stop offset='0' stop-color='#f88'/>
+            <stop offset='1' stop-color='#800' />
+        </radialGradient>
+        <radialGradient id='blue' cx='30%' cy='30%' r='70%'>
+            <stop offset='0' stop-color='#88f'/>
+            <stop offset='1' stop-color='#008' />
+        </radialGradient>
+        <radialGradient id='gray' cx='30%' cy='30%' r='70%'>
+            <stop offset='0' stop-color='#aaa'/>
+            <stop offset='1' stop-color='#111' />
+        </radialGradient>
+        <radialGradient id='lgray' cx='30%' cy='30%' r='70%'>
+            <stop offset='0' stop-color='#fff'/>
+            <stop offset='1' stop-color='#666' />
+        </radialGradient>
+        <linearGradient id='line1' x1='0.4' y1='0.4' x2='0.6' y2='0.6'>
+            <stop offset='0' stop-color='white' />
+            <stop offset='1' stop-color='black' />
+        </linearGradient>
+        <linearGradient id='line2' x1='0.6' y1='0.4' x2='0.4' y2='0.6'>
+            <stop offset='0' stop-color='white' />
+            <stop offset='1' stop-color='black' />
+        </linearGradient>
+        <linearGradient id='line3' x1='-0.4' y1='0' x2='1.4' y2='0'>
+            <stop offset='0' stop-color='white' />
+            <stop offset='1' stop-color='black' />
+        </linearGradient>
+        <linearGradient id='line4' y1='-0.4' x1='0' y2='1.4' x2='0'>
+            <stop offset='0' stop-color='white' />
+            <stop offset='1' stop-color='black' />
+        </linearGradient>
+    </defs>
+
+    <!-- the shapes and stuff will go here -->
+
+    <rect x='0' y='0' width='600' height='800' fill='beige' />
+    <!--
+    <polygon points='386.6  500.0
+                     300.0  450.0
+                     300.0  350.0
+                     386.6  300.0
+                     473.2  350.0
+                     473.2  450.0 z' fill='none' stroke='black' stroke-width='5'/>
+    <polygon points='146.2  400.0
+                     204.9  319.2
+                     300.0  350.0
+                     300.0  450.0
+                     204.9  480.8 z' fill='none' stroke='black' stroke-width='5'/>
+    -->
+    <!--Hgon-->
+    <polyline points='386.6 500 300 450' stroke='url(#line2)' stroke-width='6'/>
+    <polygon points='383.6 500 383.6 600 377.6 600 377.6 500' fill='url(#line3)'/>
+    <polygon points='389.6 500 389.6 600 395.6 600 395.6 500' fill='url(#line3)'/>
+    
+    <polygon points='291 450 291 350 297 350 297 450' fill='url(#line3)'/>
+    <polygon points='303 450 303 350 309 350 309 450' fill='url(#line3)'/>
+    
+    <polygon points='300 350 386.6 300' stroke='url(#line1)' stroke-width='6'/>
+    <polygon points='383.6 300 383.6 200 389.6 200 389.6 300' fill='url(#line3)'/>
+    <polyline points='386.6 300 473.2 350' stroke='url(#line2)' stroke-width='6'/>
+    <polyline points='473.2 343 559.8 293' stroke='url(#line1)' stroke-width='6'/>
+    <polyline points='473.2 357 559.8 307' stroke='url(#line1)' stroke-width='6'/>
+    <polygon points='476.2 350 476.2 450 470.2 450 470.2 350' fill="url(#line3)"/>
+    <polyline points='473.2 450 559.8 500' stroke='url(#line2)' stroke-width='6'/>
+    <polyline points='473.2 450 386.6 500' stroke='url(#line1)' stroke-width='6'/>
+    
+    <!--Pgon-->
+    <polyline points='138.2 400 196.9 319.2' stroke='url(#line1)' stroke-width='6'/>
+    <polyline points='154.2 400 212.9 319.2' stroke='url(#line1)' stroke-width='6'/>
+    <polygon points='154.2 403 46.2 403 46.2 397 154.2 397' fill='url(#line4)'/>
+    
+    <polyline points='204.9 319.2 300 350' stroke='url(#line2)' stroke-width='6'/>
+    <polyline points='300 450 204.9 480.8' stroke='url(#line1)' stroke-width='6'/>
+    <polyline points='204.9 480.8 146.2 400' stroke='url(#line2)' stroke-width='6'/>
+    
+    <polyline points='170.5 575.9 204.9 480.8' stroke='url(#line1)' stroke-width='6'/>
+    
+    <polyline points='336.6 180 386.6 200' stroke='url(#line2)' stroke-width='6'/>
+    <polyline points='436.6 180 386.6 200' stroke='url(#line1)' stroke-width='6'/>
+    
+    <polygon points='119.72 583.5 170.5 578.9 170.5 572.9 119.72 577.5 z' fill='url(#line4)'/>
+    <polyline points='214.82 611.3 170.5 575.9' stroke='url(#line2)' stroke-width='6'/>
+    
+    <circle cx='386.6' cy='500.0' r='25' fill='url(#gray)'/>
+    
+    <!--270 Degrees-->
+    <circle cx='386.6' cy='600.0' r='25' fill='url(#red)'/>
+    
+    <circle cx='300' cy='450.0' r='25' fill='url(#gray)'/>
+    <circle cx='300' cy='350.0' r='25' fill='url(#gray)'/>
+    <circle cx='386.6' cy='300.0' r='25' fill='url(#blue)'/>
+    
+    <!--90 Degrees-->
+    <circle cx='386.6' cy='200.0' r='25' fill='url(#gray)'/>
+    <circle cx='386.6' cy='180.0' r='18' fill='url(#lgray)'/>
+    
+    <circle cx='336.6' cy='180.0' r='18' fill='url(#lgray)'/>
+    
+    <circle cx='436.6' cy='180.0' r='18' fill='url(#lgray)'/>
+    
+    <circle cx='473.2' cy='350.0' r='25' fill='url(#gray)'/>
+    
+    <!--Offside Right Up-->
+    <circle cx='559.8' cy='300' r='25' fill='url(#red)'/>
+    
+    <circle cx='473.2' cy='450.0' r='25' fill='url(#blue)'/>
+    
+    <!--Offside Right Down-->
+    <circle cx='559.8' cy='500' r='18' fill='url(#lgray)'/>
+    
+    <circle cx='146.2' cy='400' r='25' fill='url(#gray)'/>
+    
+    <!--180 Degrees-->
+    <circle cx='46.2' cy='400' r='18' fill='url(#lgray)'/>
+    
+    <circle cx='174.1' cy='575.9' r='25' fill='url(#gray)'/>
+    <circle cx='167.27' cy='595.9' r='18' fill='url(#lgray)'/>
+    <circle cx='119.72' cy='580.5' r='18' fill='url(#lgray)'/>
+    <circle cx='214.82' cy='611.3' r='18' fill='url(#lgray)'/>
+    
+    <circle cx='204.9' cy='319.2' r='25' fill='url(#blue)'/>
+    <circle cx='204.9' cy='480.8' r='25' fill='url(#blue)'/>
+    
+    <text x='150' y='130' text-anchor="middle" font-family='DIN Alternate' font-size='36'>Theobromine</text>
+    
+    <text x='150' y='160' text-anchor="middle" font-family='DIN Alternate' font-size='26'>(Chocolate)</text>
+
+</svg>

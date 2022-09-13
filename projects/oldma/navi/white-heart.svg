@@ -1,0 +1,23 @@
+<svg width='600' height='600' viewBox='0 0 600 600'
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink= "http://www.w3.org/1999/xlink">
+
+    <!--
+    Ben Meier, 29 August 2019 
+    Navigation Icons 
+    Mobile App Design
+    -->
+    
+    <!-- the clipping paths and masks will go here -->
+
+    <defs>
+    </defs>
+
+    <!-- the shapes and stuff will go here -->
+    <g transform="translate(0 -200)rotate(225 300 300)">
+    <circle cx='133.333' cy='266.666' r='133.333' fill='white'/>
+    <circle cx='266.666' cy='133.333' r='133.333' fill='white'/>
+    <rect x='0' y='0' width='266.666' height='266.666' fill='white' />
+    </g>
+
+</svg>

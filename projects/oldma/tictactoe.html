@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--
+    Ben Meier
+    11 September 2019
+    Tic Tac Toe
+    -->
+    <meta charset='utf-8' />
+    <meta name="viewport" content="width=device-width" /> 
+    <title>Tic Tac Toe</title>
+    <style type='text/css'>
+    /* styles go here */
+        body {
+            text-align: center;
+            background-color: #808;
+            font-family: 'Chalkboard';
+            color: #e70;
+        }
+        
+        div.row > button {
+            background-color: #700070;
+            margin: 4px 2px;
+            width: 72px;
+            height: 72px;
+            font-size: 48px;
+            font-family: sans-serif;
+            color: #e80;
+            border-top: none;
+            border-left: none;
+            border-bottom: 3px solid #606;
+            border-right: 3px solid #606;
+            text-shadow: 2px 2px #333;
+            font-family: 'Chalkboard';
+        }
+        
+        button#newgame {
+            margin: 1.5em;
+            background-color: #f90;
+            background: linear-gradient(#f90,#e70);
+            border-radius: 8px;
+            padding: 8px 16px;
+            border: none;
+            width: 100px;
+            height: 30px;
+            font-family: 'Comic Sans MS';
+        }
+        
+        button#info {
+            width: 232px;
+            height: 72px;
+            background-color: #606;
+            font-family: sans-serif;
+            border-top: none;
+            border-left: none;
+            border-bottom: 3px solid #606;
+            border-right: 3px solid #606;
+            color: #e80;
+            font-size: 24px;
+            margin: 0px 2px 12px 2px;
+            text-shadow: 2px 2px #333;
+            font-family: 'Comic Sans MS';
+        }
+        
+        button#xwins {
+            width: 116px;
+            height: 72px;
+            background-color: #606;
+            font-family: sans-serif;
+            border-top: none;
+            border-left: none;
+            color: #e80;
+            font-size: 24px;
+            margin: 4px 0px 0px 0px;
+            border-bottom: 4px solid #700070;
+            border-right: 4px solid #700070;
+            text-shadow: 2px 2px #333;
+            font-family: 'Comic Sans MS';
+        }
+        
+        button#owins {
+            width: 116px;
+            height: 72px;
+            background-color: #606;
+            font-family: sans-serif;
+            border-top: none;
+            border-left: none;
+            border-right: 3px solid #606;
+            color: #e80;
+            font-size: 24px;
+            margin: 4px 0px 0px 0px;
+            border-bottom: 4px solid #700070;
+            text-shadow: 2px 2px #333;
+            font-family: 'Comic Sans MS';
+        }
+        
+
+    </style>
+</head>
+
+<body>
+    <h1>Tic Tac Toe</h1>
+    <!-- page content will go here -->
+    <div>
+        <button id='xwins'>&nbsp;</button><button id='owins'>&nbsp;</button
+    </div><br>
+    <button id='info'>X, it's your turn!</button>
+    <div id='board'>
+        <div class='row'>
+            <button>&nbsp;</button>
+            <button>&nbsp;</button>
+            <button>&nbsp;</button>
+        </div>
+        <div class='row'>
+            <button>&nbsp;</button>
+            <button>&nbsp;</button>
+            <button>&nbsp;</button>
+        </div>
+        <div class='row'>
+            <button>&nbsp;</button>
+            <button>&nbsp;</button>
+            <button>&nbsp;</button>
+        </div>
+    </div>
+    
+    <button id='newgame'>New Game</button>
+
+    <script type='text/javascript'>
+        
+        var buttons = document.getElementById('board').getElementsByTagName('button');
+        var player = "X";
+        var xWins = 0;
+        var oWins= 0;
+        var gameWon = false;
+        //alert(buttons.length)
+        for (var i=0; i<buttons.length; i++) {
+            buttons[i].onclick = boardButtonClicked;
+        }
+        
+        document.getElementById('xwins').textContent = xWins;
+        document.getElementById('owins').textContent = oWins;
+        
+        var info = document.getElementById('info');
+        
+        document.getElementById('newgame').onclick = newGame;
+        
+        function boardButtonClicked(e) {
+            //Check to make sure box is empty
+            if(e.currentTarget.textContent == "X" || e.currentTarget.textContent == "O") {
+                return;
+            } 
+            
+            //Set clicked square as an x or o
+            if (!playerWon(player)) {
+                e.currentTarget.textContent = player;
+            }
+            //Check for a win
+            if (playerWon(player) && !gameWon) {
+                info.textContent = "Player " + player + " Won!"
+                if (player == 'X') {
+                    xWins++;
+                }
+                else {
+                    oWins++;
+                }
+                document.getElementById('xwins').textContent = xWins;
+                document.getElementById('owins').textContent = oWins;
+                gameWon = true;
+            }
+            
+            if (isaDraw()) {
+                info.textContent = "It's a draw!"
+            }
+            
+            //Switch to the other player
+            if (player == 'X' && !playerWon(player) && !isaDraw()) {
+                player = 'O';
+                info.textContent = "O, it\'s your turn!"
+                }
+            else if (!playerWon(player) && !isaDraw()) {
+                player = 'X';
+                info.textContent = "X, it\'s your turn!"
+            }
+        }
+        
+        function playerWon(player) {
+            //alert('>>PW');
+            var wins = [
+                [0, 1, 2],
+                [3, 4, 5],
+                [6, 7, 8],
+                [0, 3, 6],
+                [1, 4, 7],
+                [2, 5, 8],
+                [0, 4, 8],
+                [2, 4, 6]
+            ]
+            for(var i=0; i < wins.length; i++) {
+                if (buttons[wins[i][0]].textContent == player && 
+                    buttons[wins[i][1]].textContent == player && 
+                    buttons[wins[i][2]].textContent == player) {
+                    return true;
+                }
+            }
+            //alert('<<PW');
+            return false;
+        }
+        
+        function isaDraw() {
+            if (boardIsFull() && !playerWon('X') && !playerWon('O'))
+                return true;
+            return false;
+        }
+        
+        function boardIsFull() {
+            for (var i=0; i<buttons.length;i++) {
+                if (buttons[i].textContent != 'X' && buttons[i].textContent != 'O') {
+                    return false;
+                }
+            }
+            return true;
+        }
+        
+        function newGame (e) {
+            for (var i=0; i<buttons.length;i++) {
+                buttons[i].innerHTML = '&nbsp;';
+                player = 'X';
+                info.textContent = "X, it\'s your turn!"
+                document.getElementById('info').style.fontSize = '24px'
+                document.getElementById('info').style.width = '232px'
+            }
+            gameWon = false;
+        }
+        
+    </script>
+</body>
+</html>

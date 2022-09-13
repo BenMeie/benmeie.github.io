@@ -1,0 +1,91 @@
+<svg width='600' height='800' viewBox='0 0 600 800'
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink= "http://www.w3.org/1999/xlink">
+    
+    <!--Ben Meier
+        29 August 2019 -->
+    
+    <!-- the clipping paths and masks will go here -->
+
+    <defs>
+        <radialGradient id='red' cx='30%' cy='30%' r='70%'>
+            <stop offset='0' stop-color='#f88'/>
+            <stop offset='1' stop-color='#800' />
+        </radialGradient>
+        <radialGradient id='yellow' cx='30%' cy='30%' r='70%'>
+            <stop offset='0' stop-color='#ff0'/>
+            <stop offset='1' stop-color='#660' />
+        </radialGradient>
+        <radialGradient id='green' cx='30%' cy='30%' r='70%'>
+            <stop offset='0' stop-color='#0f0'/>
+            <stop offset='1' stop-color='#050' />
+        </radialGradient>
+        <radialGradient id='purple' cx='30%' cy='30%' r='70%'>
+            <stop offset='0' stop-color='#f0f'/>
+            <stop offset='1' stop-color='#606' />
+        </radialGradient>
+        <radialGradient id='blue' cx='30%' cy='30%' r='70%'>
+            <stop offset='0' stop-color='#88f'/>
+            <stop offset='1' stop-color='#008' />
+        </radialGradient>
+        <radialGradient id='orange' cx='30%' cy='30%' r='70%'>
+            <stop offset='0' stop-color='#f80'/>
+            <stop offset='1' stop-color='#810' />
+        </radialGradient>
+        <linearGradient id='line1' x1='0.4' y1='0.4' x2='0.6' y2='0.6'>
+            <stop offset='0' stop-color='white' />
+            <stop offset='1' stop-color='black' />
+        </linearGradient>
+        <linearGradient id='line2' x1='0.6' y1='0.4' x2='0.4' y2='0.6'>
+            <stop offset='0' stop-color='white' />
+            <stop offset='1' stop-color='black' />
+        </linearGradient>
+        <linearGradient id='line3' x1='-0.4' y1='0' x2='1.4' y2='0'>
+            <stop offset='0' stop-color='white' />
+            <stop offset='1' stop-color='black' />
+        </linearGradient>
+        <radialGradient id='background' cx='50%' cy='50%' r='71%'>
+            <stop offset='0' stop-color='#778'/>
+            <stop offset='0.1' stop-color='#eef'/>
+            <stop offset='0.2' stop-color='#778'/>
+            <stop offset='0.4' stop-color='#eef'/>
+            <stop offset='0.6' stop-color='#778'/>
+            <stop offset='0.8' stop-color='#eef'/>
+            <stop offset='0.9' stop-color='#778'/>
+            <stop offset='1' stop-color='#eef' />
+        </radialGradient>
+        <filter id="f4" x="0" y="0" width="200%" height="200%">
+            <feOffset result="offOut" in="SourceAlpha" dx="3" dy="3" />
+            <feGaussianBlur result="blurOut" in="offOut" stdDeviation="2" />
+            <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+        </filter>
+    </defs>
+
+    <!-- the shapes and stuff will go here -->
+
+    <rect x='0' y='0' width='600' height='800' fill='url(#background)' />
+    <g transform='translate(-150 -200) scale(1.5)'>
+    <line x1='300' y1='500' x2='386.6' y2='450' stroke='url(#line1)' stroke-width='10'/>
+    <line x1='386.6' y1='350' x2='300' y2='300' stroke='url(#line2)' stroke-width='10'/>
+    <polygon points='208.4 450 208.4 350 218.4 350 218.4 450 z' fill='url(#line3)'/>
+    
+    <polygon points='373.6 450 373.6 350 383.6 350 383.6 450' fill='url(#line3)'/>
+    <polygon points='389.6 350 389.6 450 399.6 450 399.6 350' fill='url(#line3)'/>
+    
+    <polyline points='213.4 441 300 491' stroke='url(#line2)' stroke-width='10'/>
+    <polyline points='213.4 459 300 509' stroke='url(#line2)' stroke-width='10'/>
+    
+    <polyline points='213.4 341 300 291' stroke='url(#line1)' stroke-width='10'/>
+    <polyline points='213.4 359 300 309' stroke='url(#line1)' stroke-width='10'/>
+    
+    <circle cx='300' cy='300' r='25' fill='url(#red)'/>
+    <circle cx='213.4' cy='350' r='25' fill='url(#yellow)' />
+    <circle cx='213.4' cy='450' r='25' fill='url(#green)' />
+    <circle cx='300' cy='500' r='25' fill='url(#purple)' />
+    <circle cx='386.6' cy='450' r='25' fill='url(#blue)' />
+    <circle cx='386.6' cy='350' r='25' fill='url(#orange)' />
+    </g>
+    
+    <text x='300' y='130' text-anchor="middle" font-family="Gill Sans" font-size='60'  fill='#c33' filter='url(#f4)' font-weight="bold">Benzene Ring</text>
+
+</svg>

@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://crazycowmm.com/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width">
+    <link href="http://crazycowmm.com/c.ico" rel="shortcut icon" type="image/x-icon">
+    <link href="http://crazycowmm.com/c.ico" rel="apple-touch-icon" type="image/x-icon">
+    <title>CrazyCowMM</title>
+    <link href="./CrazyCowMM_files/css" rel="stylesheet">
+    <style type="text/css">
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        width: 100%;
+        height: 100vh;
+        background-color: #112;
+      }
+
+      #logo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+        animation: fill 1s ease forwards 5s, move 2s ease forwards 6s, recenter 1s ease forwards 6s;
+      }
+
+      #logo path:nth-child(1) {
+        stroke-dasharray: 400.4837646484375;
+        stroke-dashoffset: 400.4837646484375;
+        animation: line-anim 3s ease forwards 0.2s;
+      }
+      #logo path:nth-child(2) {
+        stroke-dasharray: 458.45074462890625;
+        stroke-dashoffset: 458.45074462890625;
+        animation: line-anim 3s ease forwards 0.4s;
+      }
+      #logo path:nth-child(3) {
+        stroke-dasharray: 396.1607360839844;
+        stroke-dashoffset: 396.1607360839844;
+        animation: line-anim 3s ease forwards 0.6s;
+      }
+      #logo path:nth-child(4) {
+        stroke-dasharray: 385.0653381347656;
+        stroke-dashoffset: 385.0653381347656;
+        animation: line-anim 3s ease forwards 0.8s;
+      }
+      #logo path:nth-child(5) {
+        stroke-dasharray: 336.761962890625;
+        stroke-dashoffset: 336.761962890625;
+        animation: line-anim 3s ease forwards 1.0s;
+      }
+      #logo path:nth-child(6) {
+        stroke-dasharray: 400.4854736328125;
+        stroke-dashoffset: 400.4854736328125;
+        animation: line-anim 3s ease forwards 1.2s;
+      }
+      #logo path:nth-child(7) {
+        stroke-dasharray: 414.5449523925781;
+        stroke-dashoffset: 414.5449523925781;
+        animation: line-anim 3s ease forwards 1.4s;
+      }
+      #logo path:nth-child(8) {
+        stroke-dasharray: 625.3446655273438;
+        stroke-dashoffset: 625.3446655273438;
+        animation: line-anim 3s ease forwards 1.6s;
+      }
+      #logo path:nth-child(9) {
+        stroke-dasharray: 551.9776611328125;
+        stroke-dashoffset: 551.9776611328125;
+        animation: line-anim 3s ease forwards 1.8s;
+      }
+      #logo path:nth-child(10) {
+        stroke-dasharray: 551.9783935546875;
+        stroke-dashoffset: 551.9783935546875;
+        animation: line-anim 3s ease forwards 2.0s;
+      }
+
+      @keyframes line-anim {
+        to {
+          stroke-dashoffset: 0;
+        }
+      }
+
+      @keyframes fill {
+        from {
+          fill: transparent;
+        }
+        to {
+          fill: white;
+        }
+      }
+        
+        @keyframes move {
+            to {
+                top: 8vh;
+            }
+        }
+        
+        @keyframes recenter {
+            to {
+                transform: translate(-50%, 0)
+            }
+        }
+        
+        div#content {
+            margin: 150px auto;
+            max-width: 800px;
+            min-width: 800px;
+            height: 100px;
+            font-family: Ubuntu, sans-serif;
+            color: white;
+            opacity: 0;
+            animation: opac 2s ease forwards 6.5s, intop 2s ease forwards 6.5s;
+        }
+        
+        div#content h2 {
+            border-bottom: 2px solid white;
+            color: white;
+            margin: 2em 0 1em;
+            text-align: left;
+            width: 40%;
+        }
+        
+        div#content p {
+            color: white;
+            text-align: left;
+        }
+        
+        @keyframes opac {
+            to {
+                opacity: 100;
+        }
+      }
+	  
+	  @keyframes intop {
+			to {
+				margin: 250px auto;
+			}
+	  }
+        
+        
+        .slideshow-container {
+          max-width: 1000px;
+          position: relative;
+          margin: auto;
+        }
+
+        /* Hide the images by default */
+        .mySlides {
+          display: none;
+        }
+
+        /* Next & previous buttons */
+        .prev, .next {
+          cursor: pointer;
+          position: absolute;
+          top: 50%;
+          width: auto;
+          margin-top: -22px;
+          padding: 16px;
+          color: white;
+          font-weight: bold;
+          font-size: 18px;
+          transition: 0.6s ease;
+          border-radius: 0 3px 3px 0;
+          user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+          right: 0;
+          border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover, .next:hover {
+          background-color: rgba(0,0,0,0.8);
+        }
+
+        /* Caption text */
+        .text {
+          color: #f2f2f2;
+          font-size: 15px;
+          padding: 8px 12px;
+          position: absolute;
+          bottom: 8px;
+          width: 100%;
+          text-align: center;
+        }
+
+        /* Number text (1/3 etc) */
+        .numbertext {
+          color: #f2f2f2;
+          font-size: 12px;
+          padding: 8px 12px;
+          position: absolute;
+          top: 0;
+        }
+
+        /* The dots/bullets/indicators */
+        .dot {
+          cursor: pointer;
+          height: 15px;
+          width: 15px;
+          margin: 0 2px;
+          background-color: #bbb;
+          border-radius: 50%;
+          display: inline-block;
+          transition: background-color 0.6s ease;
+        }
+
+        .active, .dot:hover {
+          background-color: #717171;
+        }
+
+        /* Fading animation */
+        .fade {
+          -webkit-animation-name: fade;
+          -webkit-animation-duration: 1.5s;
+          animation: fade 1.5s ease forwards 5s;
+        }
+
+        @-webkit-keyframes fade {
+          from {opacity: 0} 
+          to {opacity: 1}
+        }
+
+        @keyframes fade {
+          from {opacity: 0} 
+          to {opacity: 1}
+        }
+
+    </style>
+</head>
+
+<body>
+
+  <svg width="752" height="105" viewBox="0 0 752 105" fill="none" xmlns="http://www.w3.org/2000/svg" id="logo">
+    <!-- <mask id="path-1-outside-1" maskUnits="userSpaceOnUse" x="0.328125" y="0.5625" width="752" height="105" fill="black">
+    <rect fill="white" x="0.328125" y="0.5625" width="752" height="105"/>
+    <path d="M45.5156 70.3594V66.8438H66.6094V70.3594C66.6094 91.4531 56.0625 102 34.9688 102C13.875 102 3.32812 91.4531 3.32812 70.3594V35.2031C3.32812 14.1094 13.875 3.5625 34.9688 3.5625C56.0625 3.5625 66.6094 14.1094 66.6094 35.2031V38.7188H45.5156V35.2031C45.5156 28.1719 42 24.6562 34.9688 24.6562C27.9375 24.6562 24.4219 28.1719 24.4219 35.2031V70.3594C24.4219 77.3906 27.9375 80.9062 34.9688 80.9062C42 80.9062 45.5156 77.3906 45.5156 70.3594Z"/>
+    <path d="M73.6406 3.5625H107.039C126.961 3.5625 136.922 13.5234 136.922 33.4453C136.922 46.7109 132.492 55.5703 123.633 60.0234C130.008 73.9922 135.094 87.9844 138.891 102H116.25C112.781 89.1094 108.188 76.2188 102.469 63.3281H94.7344V102H73.6406V3.5625ZM94.7344 24.6562V42.2344H107.039C112.898 42.2344 115.828 39.3047 115.828 33.4453C115.828 27.5859 112.898 24.6562 107.039 24.6562H94.7344Z"/>
+    <path d="M189.094 91.4531H162.094L159.281 102H137.414L163.781 3.5625H187.406L213.773 102H191.906L189.094 91.4531ZM167.789 70.3594H183.398L175.594 41.1094L167.789 70.3594Z"/>
+    <path d="M244.5 24.6562H214.266V3.5625H270.516V24.6562L240.281 80.9062H270.516V102H214.266V80.9062L244.5 24.6562Z"/>
+    <path d="M319.734 55.3828V102H298.641V55.2422L272.133 3.5625H295.828L309.188 29.6484L322.547 3.5625H346.242L319.734 55.3828Z"/>
+    <path d="M390.047 70.3594V66.8438H411.141V70.3594C411.141 91.4531 400.594 102 379.5 102C358.406 102 347.859 91.4531 347.859 70.3594V35.2031C347.859 14.1094 358.406 3.5625 379.5 3.5625C400.594 3.5625 411.141 14.1094 411.141 35.2031V38.7188H390.047V35.2031C390.047 28.1719 386.531 24.6562 379.5 24.6562C372.469 24.6562 368.953 28.1719 368.953 35.2031V70.3594C368.953 77.3906 372.469 80.9062 379.5 80.9062C386.531 80.9062 390.047 77.3906 390.047 70.3594Z"/>
+    <path d="M439.266 35.2031V70.3594C439.266 77.3906 442.781 80.9062 449.812 80.9062C456.844 80.9062 460.359 77.3906 460.359 70.3594V35.2031C460.359 28.1719 456.844 24.6562 449.812 24.6562C442.781 24.6562 439.266 28.1719 439.266 35.2031ZM418.172 70.3594V35.2031C418.172 14.1094 428.719 3.5625 449.812 3.5625C470.906 3.5625 481.453 14.1094 481.453 35.2031V70.3594C481.453 91.4531 470.906 102 449.812 102C428.719 102 418.172 91.4531 418.172 70.3594Z"/>
+    <path d="M508.312 102L481.945 3.5625H503.812L520.125 64.4531L523.289 52.7812L510.07 3.5625H531.938L534.188 11.9297L536.438 3.5625H558.305L545.156 52.7812L548.25 64.4531L564.562 3.5625H586.43L560.062 102H536.438L534.188 93.6328L531.938 102H508.312Z"/>
+    <path d="M608.016 54.2578V102H586.922V3.5625H616.312L625.594 38.2266L634.875 3.5625H664.266V102H643.172V54.2578L634.172 87.9375H617.016L608.016 54.2578Z"/>
+    <path d="M692.391 54.2578V102H671.297V3.5625H700.688L709.969 38.2266L719.25 3.5625H748.641V102H727.547V54.2578L718.547 87.9375H701.391L692.391 54.2578Z"/>
+    </mask> -->
+    <path d="M45.5156 70.3594V66.8438H66.6094V70.3594C66.6094 91.4531 56.0625 102 34.9688 102C13.875 102 3.32812 91.4531 3.32812 70.3594V35.2031C3.32812 14.1094 13.875 3.5625 34.9688 3.5625C56.0625 3.5625 66.6094 14.1094 66.6094 35.2031V38.7188H45.5156V35.2031C45.5156 28.1719 42 24.6562 34.9688 24.6562C27.9375 24.6562 24.4219 28.1719 24.4219 35.2031V70.3594C24.4219 77.3906 27.9375 80.9062 34.9688 80.9062C42 80.9062 45.5156 77.3906 45.5156 70.3594Z" stroke="white" stroke-width="2" mask="url(#path-1-outside-1)"></path>
+    <path d="M73.6406 3.5625H107.039C126.961 3.5625 136.922 13.5234 136.922 33.4453C136.922 46.7109 132.492 55.5703 123.633 60.0234C130.008 73.9922 135.094 87.9844 138.891 102H116.25C112.781 89.1094 108.188 76.2188 102.469 63.3281H94.7344V102H73.6406V3.5625ZM94.7344 24.6562V42.2344H107.039C112.898 42.2344 115.828 39.3047 115.828 33.4453C115.828 27.5859 112.898 24.6562 107.039 24.6562H94.7344Z" stroke="white" stroke-width="2" mask="url(#path-1-outside-1)"></path>
+    <path d="M189.094 91.4531H162.094L159.281 102H137.414L163.781 3.5625H187.406L213.773 102H191.906L189.094 91.4531ZM167.789 70.3594H183.398L175.594 41.1094L167.789 70.3594Z" stroke="white" stroke-width="2" mask="url(#path-1-outside-1)"></path>
+    <path d="M244.5 24.6562H214.266V3.5625H270.516V24.6562L240.281 80.9062H270.516V102H214.266V80.9062L244.5 24.6562Z" stroke="white" stroke-width="2" mask="url(#path-1-outside-1)"></path>
+    <path d="M319.734 55.3828V102H298.641V55.2422L272.133 3.5625H295.828L309.188 29.6484L322.547 3.5625H346.242L319.734 55.3828Z" stroke="white" stroke-width="2" mask="url(#path-1-outside-1)"></path>
+    <path d="M390.047 70.3594V66.8438H411.141V70.3594C411.141 91.4531 400.594 102 379.5 102C358.406 102 347.859 91.4531 347.859 70.3594V35.2031C347.859 14.1094 358.406 3.5625 379.5 3.5625C400.594 3.5625 411.141 14.1094 411.141 35.2031V38.7188H390.047V35.2031C390.047 28.1719 386.531 24.6562 379.5 24.6562C372.469 24.6562 368.953 28.1719 368.953 35.2031V70.3594C368.953 77.3906 372.469 80.9062 379.5 80.9062C386.531 80.9062 390.047 77.3906 390.047 70.3594Z" stroke="white" stroke-width="2" mask="url(#path-1-outside-1)"></path>
+    <path d="M439.266 35.2031V70.3594C439.266 77.3906 442.781 80.9062 449.812 80.9062C456.844 80.9062 460.359 77.3906 460.359 70.3594V35.2031C460.359 28.1719 456.844 24.6562 449.812 24.6562C442.781 24.6562 439.266 28.1719 439.266 35.2031ZM418.172 70.3594V35.2031C418.172 14.1094 428.719 3.5625 449.812 3.5625C470.906 3.5625 481.453 14.1094 481.453 35.2031V70.3594C481.453 91.4531 470.906 102 449.812 102C428.719 102 418.172 91.4531 418.172 70.3594Z" stroke="white" stroke-width="2" mask="url(#path-1-outside-1)"></path>
+    <path d="M508.312 102L481.945 3.5625H503.812L520.125 64.4531L523.289 52.7812L510.07 3.5625H531.938L534.188 11.9297L536.438 3.5625H558.305L545.156 52.7812L548.25 64.4531L564.562 3.5625H586.43L560.062 102H536.438L534.188 93.6328L531.938 102H508.312Z" stroke="white" stroke-width="2" mask="url(#path-1-outside-1)"></path>
+    <path d="M608.016 54.2578V102H586.922V3.5625H616.312L625.594 38.2266L634.875 3.5625H664.266V102H643.172V54.2578L634.172 87.9375H617.016L608.016 54.2578Z" stroke="white" stroke-width="2" mask="url(#path-1-outside-1)"></path>
+    <path d="M692.391 54.2578V102H671.297V3.5625H700.688L709.969 38.2266L719.25 3.5625H748.641V102H727.547V54.2578L718.547 87.9375H701.391L692.391 54.2578Z" stroke="white" stroke-width="2" mask="url(#path-1-outside-1)"></path>
+  </svg>
+    
+    
+    <div id="content">
+                <h2>About</h2>
+                <p>Hello all! I'm Ben Meier, also known as CrazyCowMM. I create professional Minecraft maps for Kehaan and Lubcubs Gaming. I've been making maps since early 2015 however, I only got seriously into it in 2017. I began my professional career creating maps for the Preston Maps Team in 2018 but quickly found out that the team was not for me, so after creating just two maps I left the team. A couple of months later I found out about Kehaan's team and was accepted to join. I found the team much more to my liking and have been in it ever since. In 2019 I saw that Lubcubs Gaming was also looking for map creators so I applied to join his team and was accepted there as well.</p>
+            <h2>Portfolio</h2>
+<!--            <p>I don't currently have a portfolio up and running on this site, but you can click <a href="https://crazycowmaps.wordpress.com/portfolio/">this link</a> to check one out I have on another site!</p>-->
+                <div class="slideshow-container">
+
+                  <!-- Full-width images with number and caption text -->
+                  <div class="mySlides fade">
+                    <div class="numbertext">1 / 3</div>
+                    <img src="https://crazycowmaps.files.wordpress.com/2019/08/2019-07-10_08.59.09.png?w=1024" style="width:100%">
+                    <div class="text">Final Level for World's Edge</div>
+                  </div>
+
+                  <div class="mySlides fade">
+                    <div class="numbertext">2 / 3</div>
+                    <img src="https://crazycowmaps.files.wordpress.com/2019/08/2019-07-10_08.58.20.png?w=1024" style="width:100%">
+                    <div class="text">A Level from World's Edge</div>
+                  </div>
+
+                  <div class="mySlides fade">
+                    <div class="numbertext">3 / 3</div>
+                    <img src="https://crazycowmaps.files.wordpress.com/2019/08/2019-05-01_18.22.02.png" style="width:100%">
+                    <div class="text">Desert Oasis map for Super Bomb Survival</div>
+                  </div>
+
+                  <!-- Next and previous buttons -->
+                  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+                <br>
+
+                <!-- The dots/circles -->
+                <div style="text-align:center">
+                  <span class="dot" onclick="currentSlide(1)"></span> 
+                  <span class="dot" onclick="currentSlide(2)"></span> 
+                  <span class="dot" onclick="currentSlide(3)"></span> 
+                </div>
+            <h2>Contact</h2>
+            <p>You can contact me through 
+                </p>
+            <ul>
+                <li>My email: crazycowmm@gmail.com</li>
+                <li>My Discord: CrazyCowMM#1100</li>
+        </ul>
+        <br>
+        <br>
+    </div>
+
+
+    <script type="text/javascript">
+      const logo = document.querySelectorAll('#logo path');
+
+      for(let i =0; i<logo.length; i++) {
+        console.log(`Letter ${i} is ${logo[i].getTotalLength()}`);
+      }
+        
+        var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1} 
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none"; 
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block"; 
+  dots[slideIndex-1].className += " active";
+}
+
+    </script>
+
+
+</div></body></html>

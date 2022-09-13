@@ -1,0 +1,69 @@
+<svg width='500' height='120' viewBox='0 0 500 120'
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink= "http://www.w3.org/1999/xlink">
+
+    <!-- the clipping paths and masks will go here -->
+
+    <defs>
+    </defs>
+
+    <!-- the shapes and stuff will go here -->
+
+    <rect x='0' y='0' width='500' height='120' fill='beige' />
+    
+    <g id='v' transform="translate(110 20)">
+        <path d='M0 0
+                 L 16 0
+                 A64 64 1 0 0 80 64
+                 L80 80
+                 A80 80 0 0 1 0 0z' fill='purple'/>
+        <rect x='64' y='0' width='16' height="72" fill='purple'/>
+    </g>
+    
+    <g id='t' transform='translate(290 20)'>
+        <path d='M16 0
+                 L32 0
+                 A48 64 1 0 0 80 64
+                 L80 80
+                 A64 80 0 0 1 16 0z' fill='purple'/>
+        <rect x='0' y='0' width='80' height='16' fill='purple'/>
+    </g>
+    
+    <g id='e' transform="translate(380 20)">
+        <path d='M0 0
+                 L 16 0
+                 A64 64 1 0 0 80 64
+                 L80 80
+                 A80 80 0 0 1 0 0z' fill='purple'/>
+        <rect x='8' y='0' width='72' height='16' fill='purple'/>
+        <rect x='20' y='32' width='44' height='16' fill='purple'/>
+    </g>
+    
+    <path id='c' d='M 80 0
+                    L24 0
+                    A24 24 1 0 0 0 24
+                    L0 56
+                    A24 24 1 0 0 24 80
+                    L 80 80
+                    L80 64
+                    L24 64
+                    A8 8 0 0 1 16 56
+                    L16 24
+                    A8 8 0 0 1 24 16
+                    L 80 16
+                    L 80 0z' fill='purple' transform="translate(200 20)"/>
+    <path id='s' d='M80 0
+                    L24 0
+                    A24 24 1 0 0 24 48
+                    L56 48
+                    A8 8 0 0 1 56 64
+                    L0 64
+                    L0 80
+                    L56 80
+                    A24 24 1 0 0 56 32
+                    L24 32
+                    A8 8 0 0 1 24 16
+                    L80 16
+                    L 80 0z' fill='purple' transform="translate(20 20)"/>
+
+</svg>

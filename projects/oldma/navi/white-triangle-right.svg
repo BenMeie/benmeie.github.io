@@ -1,0 +1,20 @@
+<svg width='400' height='400' viewBox='0 0 400 400'
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink= "http://www.w3.org/1999/xlink">
+
+    <!--
+    Ben Meier, 29 August 2019 
+    Navigation Icons 
+    Mobile App Design
+    -->
+    
+    <!-- the clipping paths and masks will go here -->
+
+    <defs>
+    </defs>
+
+    <!-- the shapes and stuff will go here -->
+
+    <polygon points='0 0 0 400 400 200 z' fill='white'/>
+
+</svg>

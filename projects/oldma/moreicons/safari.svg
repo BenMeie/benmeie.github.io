@@ -1,0 +1,71 @@
+<svg width='400' height='400' viewBox='0 0 400 400'
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink= "http://www.w3.org/1999/xlink">
+
+    <!-- Ben Meier
+        10 September 2019-->
+    <!-- the clipping paths and masks will go here -->
+
+    <defs>
+        <linearGradient id='ring' x1='0' y1='0' x2='0' y2='1'>
+            <stop offset="0" stop-color='#f4f4f4'/>
+            <stop offset="1" stop-color='#bdbdbd'/>
+        </linearGradient>
+        <radialGradient id='blue' cx='50%' cy='45%' r='40%'>
+            <stop offset="0" stop-color='#e90'/>
+            <stop offset="1" stop-color='#e50'/>
+        </radialGradient>
+<!--
+        <filter id="f4" x="0" y="0" width="200%" height="200%">
+            <feOffset result="offOut" in="SourceAlpha" dx="4" dy="4" />
+            <feGaussianBlur result="blurOut" in="offOut" stdDeviation="5" />
+            <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+        </filter>
+-->
+        <linearGradient id='shadow' x1='0' y1='0' x2='1' y2='0'>
+            <stop offset='0' stop-color='black' stop-opacity="0"/>
+            <stop offset='0.5' stop-color='black' stop-opacity="0.5"/>
+            <stop offset='1' stop-color='black' stop-opacity="0"/>
+        </linearGradient>
+        <filter id='gb' x='0' y='0' width='400%' height='400%'>
+            <feGaussianBlur result='offOut' in='SourceAlpha' stdDeviation="8"/>
+            <feBlend in='SourceGraphic' in2='offOut' mode='normal'/>
+        </filter>
+    </defs>
+
+    <!-- the shapes and stuff will go here -->
+
+    
+    <circle cx='200' cy='200' r='190' fill='url(#ring)'/>
+    <circle cx='200' cy='200' r='175' fill='url(#blue)'/>
+    
+    <g id='all'>
+        <g id='topb'>
+            <g id='both'>
+                <polyline points='200 35 200 65' stroke='#ddd' stroke-width="5" stroke-linecap="round" id='big'/>
+                <polyline points='200 35 200 50' stroke='#ddd' stroke-width="5" stroke-linecap="round" id='short' transform="rotate(5.625 200 200)"/>
+            </g>
+            <use xlink:href='#both' transform="rotate(180 200 200)"/>
+        </g>
+        <use xlink:href='#topb' transform="rotate(90 200 200)"/>
+    </g>
+    
+    <use xlink:href='#all' transform="rotate(11.25 200 200)"/>
+    <use xlink:href='#all' transform="rotate(22.5 200 200)"/>
+    <use xlink:href='#all' transform="rotate(33.75 200 200)"/>
+    <use xlink:href='#all' transform="rotate(45 200 200)"/>
+    <use xlink:href='#all' transform="rotate(56.25 200 200)"/>
+    <use xlink:href='#all' transform="rotate(67.5 200 200)"/>
+    <use xlink:href='#all' transform="rotate(78.75 200 200)"/>
+    
+    <polygon points='200 35 170 200 200 365 227 200z' transform="translate(4 4) rotate(45 200 200)" fill='black' fill-opacity="0.35" filter='url(#gb)'/>
+    
+    <g id='needle' transform="rotate(45 200 200)">
+        <polygon points='200 35 200 200 170 200' fill='#fe504e'/>
+        <polygon points='200 35 200 200 230 200' fill='#cf1414'/>
+        <polygon points='200 365 200 200 170 200' fill='#efefef'/>
+        <polygon points='200 365 200 200 230 200' fill='#ababab'/>
+    </g>
+    
+    
+</svg>

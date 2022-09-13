@@ -1,0 +1,57 @@
+<svg width='600' height='800' viewBox='0 0 600 800'
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink= "http://www.w3.org/1999/xlink">
+    
+    <!-- Ben Meier
+        27 Aug 2019 -->
+
+    <!-- the clipping paths and masks will go here -->
+
+    <defs>
+        <filter id="f4" x="0" y="0" width="200%" height="200%">
+      <feOffset result="offOut" in="SourceAlpha" dx="3" dy="3" />
+      <feGaussianBlur result="blurOut" in="offOut" stdDeviation="2" />
+      <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+    </filter>
+    </defs>
+
+    <!-- the shapes and stuff will go here -->
+
+    <rect x='0' y='0' width='600' height='800' fill='black' />
+    
+    <g transform='translate(30 90) scale(0.9)'>
+    <!--Left-->
+    <circle cx='210' cy='490' r='180' fill='red' />
+    <!--Right-->
+    <circle cx='390' cy='490' r='180' fill='blue' />
+    <!--Top-->
+    <circle cx='300' cy='334.12' r='180' fill='yellow' />
+    
+    <!--Left-->
+    <circle cx='210' cy='490' r='180' fill='red' fill-opacity="0.5"/>
+    <!--Right-->
+    <circle cx='390' cy='490' r='180' fill='blue' fill-opacity="0.3"/>
+    <!--Top-->
+    <circle cx='300' cy='334.12' r='180' fill='yellow' fill-opacity="0.5"/>
+    
+    <g font-size='36' text-anchor="middle" fill='white' font-family='Futura, sans-serif' filter='url(#f4)'>
+        <text x='300' y='270'>Green</text>
+    
+        <text x='140' y='550'>Small</text>
+    
+        <text x='460' y='530'>Poor</text>
+        <text x='460' y='570'>Grammar</text>
+    </g>
+    <g font-size='25' text-anchor="middle" fill='white' font-family='Futura, sans-serif' filter='url(#f4)'>
+        <text x='190' y='395'>Kermit</text>
+        <text x='410' y='395'>Hulk</text>
+        <text x='300' y='560'>Gary</text>
+        <text x='300' y='585'>Coleman</text>
+        <text x='300' y='445'>Yoda</text>
+    </g>
+    </g>
+    <text x='300' y='120' font-size='42' fill='white' font-family="Futura, sans-serif" text-anchor='middle'>Yodagram</text> 
+    
+    <text x='590' y='790' text-anchor="end" fill='white'>Copyright © 2019 Ben Meier</text>
+
+</svg>

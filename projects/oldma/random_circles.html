@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--
+    YOUR NAME HERE, date, project name, class, etc.
+    -->
+    <meta charset='utf-8' />
+    <meta name="viewport" content="width=device-width" /> 
+    <title>Random Circles</title>
+    <style type='text/css'>
+        body {
+            text-align: center;
+            font-family: Futura, sans-serif;
+        }
+        h1 {
+            font-weight: normal;
+        }
+        
+        label {
+            display: inline-block;
+            width: 150px;
+            text-align: right;
+            margin: 8px;
+        }
+        input[type=range] {
+            width: 250px;
+            top: 3px;
+            position: relative
+        }
+        
+        label.right {
+            text-align: left;
+            margin: 8px;
+            width: 90px;
+        }
+        
+        footer {
+            margin: 1.3em;
+            opacity: 0.4;
+        }
+        
+        .slider {
+          -webkit-appearance: none;
+          width: 100%;
+          height: 15px;
+          border-radius: 5px;   
+          background: #ccc;
+          outline: none;
+          opacity: 0.7;
+        }
+
+        .slider::-webkit-slider-thumb {
+          -webkit-appearance: none;
+          appearance: none;
+          width: 25px;
+          height: 25px;
+          border-radius: 50%; 
+          background: #f90;
+          cursor: pointer;
+        }
+
+        .slider::-moz-range-thumb {
+          width: 25px;
+          height: 25px;
+          border-radius: 50%;
+          background: #4CAF50;
+          cursor: pointer;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>Random Circles</h1>
+    <!-- page content will go here -->
+    <svg width='600' height='400' viewBox='0 0 600 400'
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink= "http://www.w3.org/1999/xlink">
+
+        <!-- the clipping paths and masks will go here -->
+
+        <defs>
+        </defs>
+
+        <!-- the shapes and stuff will go here -->
+
+        <rect x='0' y='0' width='600' height='400' fill='wheat' />
+        <g id='circles'>
+        
+        </g>
+
+    </svg>
+    
+    <p>
+        <label>Number of Circles</label>
+        <input type='range' min='10' max='200' value='100' id='number' step='1' class='slider'/>
+        <label id='nr' class='right'></label>
+        </p>
+    <p>
+        <label>Opacity</label>
+        <input type='range' min='0.1' max='10.0' value='5' id='opacity' step='0.1' class='slider'/>
+        <label id='or' class='right'></label>
+    </p>
+    <p>
+        <label>Maximum Radius</label>
+        <input type='range' min='10' max='200' value='100' id='radius' class='slider'/>
+        <label id='rr' class='right'></label>
+    </p>
+    </div>
+
+    <script type='text/javascript'>
+        document.getElementById('number').oninput = makeCircles;
+        document.getElementById('opacity').oninput = makeCircles;
+        document.getElementById('radius').oninput = makeCircles;
+    
+        makeCircles();
+        
+        var sliderc = document.getElementsByClassName('slider');
+        
+//        for(var i=0; i<sliderc.length; i++) {
+//            sliderc[i].style.background = randomColor();
+//        }
+        
+        function makeCircles() {
+            document.getElementById('circles').innerHTML = ""
+            var n = document.getElementById('number').value;
+            document.getElementById('nr').textContent = n;
+            for(var i=0; i<n; i++) {
+                makeOneCircle();
+            }
+        }
+        
+        function makeOneCircle() {
+            var op = document.getElementById('opacity').value / 10;
+            var rad = document.getElementById('radius').value;
+            document.getElementById('or').textContent = op.toFixed(2);
+            document.getElementById('rr').textContent = rad;
+            var x = randomInt(0, 600);
+            var y = randomInt(0, 400);
+            var r = randomInt(10, rad);
+            var color = randomColor();
+            var fillo = op;
+            
+            //<circle cx='x' cy='y' radius='r' fill='color'/>
+            var circle = "<circle cx='" + x +
+                "' cy='" + y + 
+                "' r='" + r + 
+                "' fill='" + color + 
+                "' fill-opacity='" + fillo + "' />\n";
+            
+            document.getElementById('circles').innerHTML += circle;
+        }
+        
+        function randomColor() {
+            return '#' + randomHexDigit() + randomHexDigit() + randomHexDigit();
+        }
+        
+        function randomHexDigit() {
+            var hexDigits = "0123456789abcdef";
+            var randomIndex = Math.floor(Math.random() * hexDigits.length);
+            return hexDigits.substring(randomIndex, randomIndex+1);
+        }
+        
+        function randomInt(lower, upper) {
+            return lower + Math.floor(Math.random() * (upper-lower));
+        }
+
+    </script>
+    
+    <footer>Copyright &copy; Ben Meier</footer>
+    
+</body>
+</html>

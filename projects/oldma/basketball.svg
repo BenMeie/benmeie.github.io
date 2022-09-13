@@ -1,0 +1,26 @@
+<svg width='200' height='200' viewBox='0 0 200 200'
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink= "http://www.w3.org/1999/xlink">
+
+    <!-- Ben Meier
+            23 September 2019-->
+
+    <defs>
+        <clipPath id='ball'>
+            <circle cx='100' cy='100' r='50' fill='orange'/>
+        </clipPath>
+        <radialGradient id='orange' cx='30%' cy='30%' r='70%'>
+            <stop offset='0' stop-color='#f90'/>
+            <stop offset='1' stop-color='#b40' />
+        </radialGradient>
+    </defs>
+
+    <!-- the shapes and stuff will go here -->
+
+    <circle cx='100' cy='100' r='50' fill='url(#orange)'/>
+    <polyline points='100 50 100 150' stroke='black'/>
+    <polyline points='50 100 150 100' stroke='black'/>
+    <circle cx='25' cy='100' r='50' fill='none' stroke='black' clip-path="url(#ball)"/>
+    <circle cx='175' cy='100' r='50' fill='none' stroke='black' clip-path="url(#ball)"/>
+
+</svg>

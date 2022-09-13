@@ -1,0 +1,70 @@
+<svg width='600' height='400' viewBox='0 0 600 400'
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink= "http://www.w3.org/1999/xlink">
+    
+    <!--Ben Meier
+        3 September 2019 -->
+
+    <!-- the clipping paths and masks will go here -->
+
+    <defs>
+        <clipPath id='c'>
+            <polygon points='0 0 100 0 100 15 50 50 100 85 100 100 0 100 z' stroke='black' fill='none'/>
+        </clipPath>
+        <clipPath id='m'>
+            <polygon points='100 50 200 50 200 100 100 100z'/>
+        </clipPath>
+        <clipPath id='ec'>
+            <polygon points='250 0 450 0 450 100 350 100 450 200 250 200z' fill='none' stroke='black'/>
+        </clipPath>
+        <clipPath id='el'>
+            <circle cx='350' cy='100' r='52.5'/>
+        </clipPath>
+    </defs>
+
+    <!-- the shapes and stuff will go here -->
+
+    <rect x='0' y='0' width='600' height='400' fill='beige' />
+    
+    <circle clip-path="url(#c)" cx='50' cy='50' r='40' fill='none' stroke='blue' stroke-width='5'/>
+    <!--<polygon points='50 50 100 0 100 100 z' stroke='black' fill='none'/>-->
+    
+    <g id='d'>
+        <circle cx='50' cy='200' r='40' fill='none' stroke='green' stroke-width='5'/>
+        <polyline points='90 100 90 240' stroke='green' stroke-width='5'/>
+    </g>
+    
+    <path d='M550 150
+             A50 50 1 1 0 500 200
+             A50 50 0 1 1 450 250' stroke='red' stroke-width='10' fill='none'/>
+    <g id='m'>
+        <circle cx='150' cy='100' r='30' stroke='orange' stroke-width='5' fill='none' clip-path='url(#m)'/>
+        <path d='M180 100
+                 A30 30 0 0 1 240 100' stroke='orange' stroke-width='5' fill='none'/>
+        <polyline points='120 73 120 150' stroke='orange' stroke-width='5'/>
+        <polyline points='180 100 180 150' stroke='orange' stroke-width='5'/>
+        <polyline points='240 100 240 150' stroke='orange' stroke-width='5'/>
+    </g>
+    <g id='e' transform='rotate(-22.5 350 100)'>
+        <circle cx='350' cy='100' r='50' stroke='blue' stroke-width='5' fill='none' clip-path='url(#ec)'/>
+        <polyline points='300 100 402.5 100' stroke='blue' stroke-width='5' clip-path="url(#el)"/>
+    </g>
+    
+    <path d='M300 350 
+             L285 350
+             L285 200
+             L300 200
+             C 350 200 375 230 375 275
+             C 375 320 350 350 300 350z' stroke-width='5' stroke='purple' fill='none'/>
+    
+    <path d='M50 350
+             A200 200 0 0 1 250 150' fill='none' stroke='red' stroke-width='3'/>
+    
+    <path d='M50 350
+             C50 250 150 150 250 150' fill='none' stroke='darkgoldenrod' stroke-width='3'/>
+    <path d='M50 350
+             C50 200 100 150 250 150' fill='none' stroke='green' stroke-width='3'/> 
+    <path d='M50 350
+             C50 150 50 150 250 150' fill='none' stroke='blue' stroke-width='3'/>
+    
+</svg>

@@ -1,0 +1,44 @@
+h1 {
+    text-align: center;
+    font-family: lemon
+}
+
+body {
+    background-color: honeydew;
+}
+
+table {
+    width: 75%;
+    max-width: 900px;
+    border-collapse: collapse;
+    margin: 0 auto
+}
+
+@font-face {
+    font-family: mayden;
+    src: url(http://blocksanity.net/content/fonts/MadeynSans-Semibold.ttf)
+}
+
+@font-face {
+    font-family: lemon;
+    src: url(http://blocksanity.net/content/fonts/LemonMilk.otf)
+}
+
+th, td {
+    border: 2px solid darkgreen;
+    font-family: mayden;
+    padding: 8px 0.25in;
+}
+
+th {
+    background-color: #cceeff;
+}
+
+td {
+    background-color: #ccffcc;
+}
+
+footer {
+    text-align: center;
+    margin: 2em;
+}

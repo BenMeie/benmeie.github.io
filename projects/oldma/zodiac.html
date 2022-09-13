@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--
+    Ben Meier
+    12 September 2019
+    -->
+    <meta charset='utf-8' />
+    <meta name="viewport" content="width=device-width" /> 
+    <title>Chinese Zodiac</title>
+    <style type='text/css'>
+        body {
+            background-color: #f92;
+            text-align: center;
+            font-family: "Candara", sans-serif;
+        }
+        table#years {
+            width: 75%;
+            max-width: 900px;
+            border-collapse: collapse;
+            margin: 1em auto;
+            max-width: 900px;
+        }
+        
+        td, th{
+            border: 2px solid #500;
+            text-align: center;
+            padding: 4px 8px;
+            width: 8.33%;
+        }
+        th {
+            background-color: #922;
+            color: white;
+        }
+        
+        span {
+            text-align: left;
+            margin-left: 1em;
+            display: inline-block;
+            width: 20%;
+            max-width: 600px;
+            min-width: 300px;
+            font-family: "Candara", sans-serif;
+        }
+        
+        input {
+            width: 4em;
+        }
+        
+        footer {
+            margin: 1.3em;
+        }
+        
+        @media screen and (max-width: 800px) {
+            table {max-width: 600px;
+                font-size: 0.7em;
+            
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>Chinese Zodiac</h1>
+    <div>
+        <input type='text' id='user'/>
+        <button id='search'>Lookup</button>
+        <span id='result'></span>
+    </div>
+    <table id='years'>
+    
+    </table>
+
+    <script type='text/javascript'>
+        
+    // scripts will go here
+        var animals = [
+                "Rat", "Ox", "Tiger", "Rabbit", "Dragon", "Snake", "Horse", "Goat", "Monkey", "Rooster", "Dog", "Pig"
+            ];
+        
+        document.getElementById('search').onclick = handleUserInput;
+        
+        drawTheYears();
+        
+        function handleUserInput (e) {
+            //1. read the year from input field
+            var year = parseInt(document.getElementById('user').value);
+            //2. compute the animal
+            document.getElementById('result').textContent = year + ' is the year of the ' + computeAnimalFromYear(year) + '.';
+            //3. write a message
+            
+        }
+        
+        function computeAnimalFromYear(year) {
+            var index = ((year % 12) + 8) % 12;
+            return animals[index];
+        }
+        
+        function drawTheYears() {
+            var tableContents = "";
+            tableContents += '<tr>';
+
+            for (var i=0; i<animals.length; i++) {
+                tableContents += "<th>" + animals[i] + "</th>"
+            }
+
+            tableContents += '</tr>';
+
+            for (var year=1948; year<2032; year+=12) {
+                tableContents += '<tr>';
+                for (var i=0; i<12; i++) {
+                    tableContents += '<td>' + (year+i) + '</td>';
+                }
+
+                tableContents += '</tr>\n';
+            }
+
+            document.getElementById('years').innerHTML = tableContents;
+        }
+
+    </script>
+    
+    <footer>&copy; Ben Meier 2019</footer>
+</body>
+</html>

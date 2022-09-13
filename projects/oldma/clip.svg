@@ -1,0 +1,27 @@
+<svg width='600' height='400' viewBox='0 0 600 400'
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink= "http://www.w3.org/1999/xlink">
+
+    <!-- the clipping paths and masks will go here -->
+
+    <defs>
+        <rect id='red' x='0' y='0' width='600' height='100' fill='red'/>
+        <rect id='orange' x='0' y='100' width='600' height='100' fill='orange'/>
+        <rect id='green' x='0' y='200' width='600' height='100' fill='green'/>
+        <rect id='purple' x='0' y='300' width='600' height='100' fill='purple'/>
+        
+        <clipPath id="diamond">
+            <polygon points='300 10 490 200 300 390 110 200' fill='blue'/>
+        </clipPath>
+    </defs>
+
+    <!-- the shapes and stuff will go here -->
+
+    <rect x='0' y='0' width='600' height='400' fill='beige' />
+    
+    <use xlink:href='#red' clip-path="url(#diamond)" fill='red'/>
+    <use xlink:href='#orange' clip-path="url(#diamond)" fill='orange'/>
+    <use xlink:href='#green' clip-path="url(#diamond)" fill='green'/>
+    <use xlink:href='#purple' clip-path="url(#diamond)" fill='purple'/>
+
+</svg>
