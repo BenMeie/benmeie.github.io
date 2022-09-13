@@ -1,0 +1,1 @@
+document.querySelector('#splashImage').src = `assets/splashes/${Math.floor(Math.random() * 4 + 1)}.jpg`

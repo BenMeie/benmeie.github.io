@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+
+.splash {
+    width: 100%;
+    margin: 0 auto;
+    height: 100%;
+    position: relative;
+    background-color: black;
+  }
+  
+  .splash img {
+    width: 100%;
+    height: auto;
+    transition: 0.2s ease;
+    opacity: 0.6;
+  }
+  
+  .splashText {
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    color: white;
+    font-family: 'Lato', sans-serif;
+  }
+
+  .splashText h1 {
+    font-weight: 700;
+  }
+
+  .splashText h2 {
+    font-size: 1.5rem;
+  }
+
+  .archiveDownloadCards {
+    margin: 0 auto;
+    width: 50%;
+  }
+
+  .archiveDownloadCard {
+    max-width: 1000px;
+  }
+
+  .archiveCardImageContainer {
+    overflow: hidden;
+  }
+
+  .archiveImg {
+    min-width: 300px;
+  }
