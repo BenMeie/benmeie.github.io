@@ -1,0 +1,559 @@
+.content {
+    margin: 50px auto 0;
+    width: 45%;
+    text-align: center;
+    min-width: 1200px;
+}
+
+.desc {
+    margin-top: 10%;
+    padding: 10px;
+    background-color: white;
+    border-radius: 15px;
+}
+
+.desc h1 {
+    color: black;
+}
+
+.rescaleimg {
+    padding: 05% 0% 10% 0%;;
+    width: 70%;
+    transition: 0.5s ease;
+    -webkit-transition: 0.5s ease;
+}
+
+.about {
+    padding: 60px 40px 80px 40px;
+    background: white;
+    border-radius: 20px;
+}
+
+.about h1{
+    font-family: mayden;
+    color: gray;
+    font-size: 40px;
+}
+
+.about p {
+    font-family: getho;
+    color: gray;
+    font-size: 20px;
+}
+
+.team_members {
+    margin: -30px 0 0 0;
+    padding: 60px 40px 80px 40px;
+    background: white;
+    border-top: 1px solid gray;
+    border-radius: 20px;
+}
+.team_members img{
+    border-radius: 35px;
+}
+
+.apply {
+    margin: -30px 0 0 0;
+    padding: 60px 40px 80px 40px;
+    background: white;
+    border-top: 1px solid gray;
+    border-radius: 20px;
+}
+
+.apply h1 {
+    font-family: mayden;
+    color: gray;
+    font-size: 40px;
+}
+
+.apply h3 {
+    font-family: getho;
+    color: gray;
+    font-size: 26px;
+    
+}
+
+.apply h4 {
+    font-family: getho;
+    color: gray;
+    font-size: 25px;
+}
+
+.apply p {
+    font-family: getho;
+    color: gray;
+    font-size: 20px;
+}
+
+.partners {
+    margin: -30px 0 0 0;
+    padding: 60px 40px 60px 40px;
+    background: white;
+    border-top: 1px solid gray;
+    border-radius: 20px;
+}
+
+.partners h1 {
+    font-family: mayden;
+    color:gray;
+    font-size: 40px;
+}
+
+.partners h3 {
+    font-family: getho;
+    color: gray;
+    font-size: 26px;
+    
+}
+
+.partners img {
+    border-radius: 35px;
+}
+
+.footer {
+    margin: 40px 0 0 0;
+    background: white;
+    border-radius: 10px;
+    font-family: mayden;
+    font-size: 20px;
+    
+}
+
+.footer .smaller {
+    font-family: mayden;
+    font-size: 10px;
+}
+
+
+.socialbar {
+        border-radius: 20px;
+    position: fixed;
+    top: 93%;
+    background: white;
+    width: 200px;
+}
+
+.socials {
+    padding: 5px 15px 5px 10px;
+    width: 40px;
+    float: left
+}
+
+.applypage {
+    margin: 30px 0 0 0;
+    padding: 20px;
+    background: white;
+    border-radius: 20px;
+}
+
+img {
+    width: 100%;
+    transition: 0.5s ease;
+    -webkit-transition: 0.5s ease;
+}
+@media screen and (max-width: 1199px) {
+    .content {
+    width: 100%;
+    min-width:0;
+    }
+    .rescaleimg {
+        padding: 0;
+        width: 100%;
+    }
+}
+
+.mapdesc {
+    margin: 40px 25% 0 25%;
+	font-family: helvetica;
+	font-size: 20px;
+	color: black;
+    text-align: left;
+    transition: 0.5s ease;
+    -webkit-transition: 0.5s ease;
+}
+
+.mapdesctitle {
+	width: 100%;
+	text-align: center;
+	padding: 5px;
+	font-family: mayden;
+	font-size: 40px;
+	color: white;
+	border-radius: 20px;
+    background-color: #961b25;
+    transition: 0.5s ease;
+    -webkit-transition: 0.5s ease;
+}
+
+@media screen and (max-width: 1500px) {
+    .mapdesctitle {
+        width: 100%;
+        font-size: 30px;
+    }
+    
+    .mapdesc {
+        font-size: 15px;
+    }
+}
+
+a {
+ font-family: mayden;
+ font-size: 150%;
+ text-decoration: none;
+}
+
+html {
+  background-image: url("content/images/content/headimg.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+h1 {
+    font-family: lemonmilk;
+    font-size: 500%;
+    left: 50%;
+    color: gray;
+}
+
+h3 {
+	font-size: 40px;
+    font-family: lemonmilk;
+    color: gray;
+}
+
+p {
+font-size: 40px;
+    font-family: mayden;
+    color: gray;
+}
+
+
+
+
+@font-face {
+	font-family: lemonmilk;
+	src: url(content/fonts/LemonMilk.otf);
+}
+
+@font-face {
+	font-family: mayden;
+	src: url(content/fonts/MadeynSans-Semibold.ttf);
+}
+
+@font-face {
+	font-family: getho;
+	src: url(content/fonts/Getho-Light.ttf);
+}
+/* MENU CSS */
+.announce {
+    position: fixed;
+    top: 52px;
+    left: 0px;
+    width: 100%;
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    list-style-type: none;
+    margin: 0px;
+    padding: 5px;
+    overflow: hidden;
+    border-bottom: 3px solid #e92e14;
+    border-top: 3px solid #e92e14;
+    background-image: linear-gradient(to right, rgb(50, 50, 50), rgb(87, 87, 87));
+    float: center;
+    width: 100%;
+
+}
+
+.menuli {
+    float: left;
+}
+
+.menuli a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 0px 10px;
+    text-decoration: none;
+    font-family: mayden;
+    font-size: 30px;
+    -webkit-transition: 0.2s ease;
+    transition: .2s ease;
+}
+
+.menuli a:hover, .dropdown:hover .dropbtn {
+    background-color: black;
+    font-size: 32px;
+}
+
+.menuli.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: fixed;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {background-color: black; color: white;}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.pad {
+    margin: 0 15% 0 15%;
+    width: 100%;
+}
+
+/* CSS FOR MAP DOWNLOAD PAGE */
+.main {
+    max-width: 5000px;
+    margin: auto;
+}
+
+
+.row {
+    margin: 0px;
+}
+
+/* Add padding BETWEEN each column (if you want) */
+.row,
+.row > .column {
+    padding: 15px;
+}
+
+.row,
+.row > .column2 {
+    padding: 15px;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 45%;
+    transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s;
+}
+
+.apply .column {
+    width: 30%;
+}
+
+.team_members .column {
+    width: 20%;
+}
+
+.partners .column {
+    width: 20%;
+}
+
+.column2 {
+    float: left;
+    width: 10%;
+    transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s;
+}
+
+.column:hover {
+
+}
+
+/* Clear floats after rows */ 
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media screen and (max-width: 2000px) {
+    .column {
+        width: 45%;
+    }
+    
+    .column2 {
+        width: 10%;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 1000px) {
+    .column {
+        width: 45%;
+    }
+    
+    .column2 {
+        width: 16%;
+    }
+
+    .apply .column {
+        width: 27%
+    }
+}
+.button {
+    background-color: rgb(80,80,80);
+    border: none;
+    color: white;
+    padding: 5px 0px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 24px;
+    margin-right: auto;
+    margin-left: auto;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    cursor: pointer;
+    font-family: mayden;
+}
+
+@media screen and (max-width: 800px) {
+    .button {
+        font-size: 15px;
+    }
+}
+
+.button1 {
+    background-color: gray; 
+    color: black; 
+    border: 2px solid rgba(80,80,80);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+    width: 25%;
+    text-decoration: none;
+}
+
+.button1:hover {
+    background-color: #ee4f00;
+    color: white;
+}
+
+.info {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 10px;
+  width: 100%;
+  opacity: 0;
+  -webkit-transition: 0.5s ease;
+  transition: .5s ease;
+}
+
+.button:hover .info {
+    opacity: 1;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+}
+
+.image {
+  display: block;
+  max-width: 100%;
+  border-radius: 35px;
+  -webkit-transition: 0.5s ease;
+    transition: .5s ease;
+}
+
+
+.round-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  -webkit-transition: 0.5s ease;
+    transition: .5s ease;
+}
+
+
+.overlay {
+  position: absolute;
+  top: -40;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  -webkit-transition: 0.5s ease; /* Safari */
+  transition: .5s ease;
+}
+
+.coloroverlay {
+    position: absolute;
+    top: -40;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 115%;
+    opacity: 0;
+    -webkit-transition: 0.5s ease; /* Safari */
+    transition: .5s ease;
+  }
+
+.container:hover .overlay {
+  top: 0;
+  opacity: 1;
+}
+
+.container:hover .coloroverlay {
+    top: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.5;
+    background-color: black;
+  border-radius: 35px;
+  width: 100%;
+}
+
+.container:hover .map-title {
+    box-shadow: 2px 2px 2px rgb(196, 36, 0);
+}
+
+
+.map-title {
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.673);
+  font-family: mayden;
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s; /* Safari */
+}
+
+.map-desc { 
+  color: white;
+  text-align: center;
+  font-family: mayden;
+  font-size: 16px;
+  transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s; /* Safari */
+}
