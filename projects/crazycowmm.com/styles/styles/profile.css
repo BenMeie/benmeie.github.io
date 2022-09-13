@@ -1,0 +1,108 @@
+.banner_box {
+    height: 516px;
+    max-width: 1512px;
+    margin: 0 auto;
+}
+
+.profile_banner {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    position: relative;
+    z-index: 0;
+}
+
+.pfp {
+    width: 117px;
+    border-radius: 50%;
+}
+
+.user_box {
+    position: absolute;
+    z-index: 2;
+    top: 459px;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.user_info {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+.user_name {
+    font-family: Roboto, sans-serif;
+    font-size: 42px;
+    color: white;
+    margin: 3px 0;
+}
+
+.user_followers {
+    display: flex;
+    margin-bottom: 5px;
+}
+
+.follow_count {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 100;
+    color: white;
+    margin: 0 5px 0 0;
+}
+
+.user_social {
+    display: flex;
+    align-items: center;
+}
+
+.social_icon {
+    width: 20px;
+    height: 100%;
+    margin-right: 10px;
+}
+
+.follow_button {
+    position: absolute;
+    z-index: 2;
+}
+
+.profile_sub_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+}
+
+.profile_content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1.5rem;
+    max-width: 1512px;
+    margin: 20px auto;
+}
+
+.submissions {
+    grid-column: 1/4;
+}
+
+.about {
+    background-color: #272727;
+    border: 1px solid #707070;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.profile_section_heading {
+    font-size: 25px;
+    color: white;
+    margin: 0;
+    font-family: Roboto, sans-serif;
+}
+
+.about p {
+    color: white;
+    font-weight: 300;
+    font-family: Roboto, sans-serif;
+}

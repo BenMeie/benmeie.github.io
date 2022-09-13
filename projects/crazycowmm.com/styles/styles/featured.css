@@ -1,0 +1,56 @@
+
+div.fslideshow {
+    margin: 0 10%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.fslideshow i {
+    color: white;
+    font-size: 30px;
+    margin: 20px;
+    cursor: pointer;
+}
+
+.fslideshow .slidecontent {
+    background-color: #272727;
+    border: 1px solid #707070;
+    border-radius: 5px;
+    padding: 25px;
+    display: flex;
+    transition: 0.5s ease;
+}
+
+.slidecontent .map_img {
+    width: 55%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s ease;
+}
+
+.slidecontent .mapcontent {
+    color: white;
+    margin-left: 15px;
+}
+
+.mapcontent h2{
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 2px;
+}
+
+.mapcontent p.author {
+    font-size: 15;
+    font-weight: 100;
+    margin-top: 0;
+}
+
+.mapcontent p.desc {
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.slidecontent .slide {
+    display: none;
+}
