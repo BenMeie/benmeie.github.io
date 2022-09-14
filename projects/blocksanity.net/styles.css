@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
 body {
 
@@ -25,12 +25,13 @@ a {
 
 div#navbar {
   width: 101%;
-  margin: -10px;
-  position: fixed;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
   top: 0;
   background-color: #00000050;
   padding: 40px 10px 10px;
-  transition: 0.2s ease
+  transition: 0.2s ease;
+  z-index: 1;
 }
 
 div#navbar a {
@@ -61,6 +62,7 @@ div#navbar img {
   position: absolute;
   object-fit: cover;
   left: 0;
+  z-index: 0;
   right: 100px;
   width: auto;
   height: auto;
@@ -180,15 +182,15 @@ div.listItem:hover div.listItemDimmer {
 
 @font-face {
 	font-family: lemonmilk;
-	src: url(http://blocksanity.net/content/fonts/LemonMilk.otf);
+	src: url(content/fonts/LemonMilk.otf);
 }
 
 @font-face {
 	font-family: mayden;
-	src: url(http://blocksanity.net/content/fonts/MadeynSans-Semibold.ttf);
+	src: url(content/fonts/MadeynSans-Semibold.ttf);
 }
 
 @font-face {
 	font-family: getho;
-	src: url(http://blocksanity.net/content/fonts/Getho-Light.ttf);
+	src: url(content/fonts/Getho-Light.ttf);
 }

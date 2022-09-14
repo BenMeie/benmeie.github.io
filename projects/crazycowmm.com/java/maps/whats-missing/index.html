@@ -10,6 +10,10 @@
         <title>What's Missing | CrazyCowMM</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+                <!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+        <link rel="stylesheet" type="text/css" href="../../style.css">
         <link rel="stylesheet" href="../../../styles/main.css">
         <script src="https://kit.fontawesome.com/5cb310aa21.js" crossorigin="anonymous"></script>
     </head>
@@ -17,6 +21,62 @@
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+
+        <nav class="navbar navbar-expand-lg bg-light">
+          <div class="container-fluid">
+              <a class="navbar-brand" href="#">Ben Meier</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                  <li class="nav-item">
+                  <a class="nav-link" href="../">Home</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Projects</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="#">About</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="">Contact</a>
+                  </li>
+              </ul>
+              </div>
+          </div>
+      </nav>
+
+        <nav class='main'>
+          <div class='nav_content'>
+          <a id='logo' href="./">CrazyCowMM</a>
+          <div class='user-dropdown'>
+              <a class='nav-item' href="#">Java</a>
+            <div class="dropdown-area">
+              <div class='dropdown-content'>
+                <a href="./java/maps">Maps</a>
+                <a href="./java/comissions">Comissions</a>
+                <a href="./java/builds">Builds</a>
+                <a href="./java/progress">Progress</a>
+              </div>
+            </div>
+          </div>
+          <div class='user-dropdown'>
+            <a class='nav-item' href="#">Bedrock</a>
+          <div class="dropdown-area">
+            <div class='dropdown-content'>
+              <!-- <a href="./bedrock/maps">Maps</a>
+              <a href="./bedrock/comissions">Comissions</a>
+              <a href="./bedrock/builds">Builds</a> -->
+              <a href="./bedrock/progress">Progress</a>
+            </div>
+          </div>
+        </div>
+          <a class='nav-item' href="./datapacks">About</a>
+          <a class='nav-item' href="./resoucepacks">Contact</a>
+        </div>
+      </nav>
+
         <div class='content-centered'>
             <h3 class='b_content_title'>What's Missing</h3>
             <img class='chimg' src="../../../assets/WhatsMissing.jpg">
@@ -73,35 +133,7 @@
         <footer>
           © <a href="https://twitter.com/crazycowmm">CrazyCowMM</a> 2020.
       </footer>
-      <nav class='main'>
-          <div class='nav_content'>
-          <a id='logo' href="./">CrazyCowMM</a>
-          <div class='user-dropdown'>
-              <a class='nav-item' href="#">Java</a>
-            <div class="dropdown-area">
-              <div class='dropdown-content'>
-                <a href="./java/maps">Maps</a>
-                <a href="./java/comissions">Comissions</a>
-                <a href="./java/builds">Builds</a>
-                <a href="./java/progress">Progress</a>
-              </div>
-            </div>
-          </div>
-          <div class='user-dropdown'>
-            <a class='nav-item' href="#">Bedrock</a>
-          <div class="dropdown-area">
-            <div class='dropdown-content'>
-              <!-- <a href="./bedrock/maps">Maps</a>
-              <a href="./bedrock/comissions">Comissions</a>
-              <a href="./bedrock/builds">Builds</a> -->
-              <a href="./bedrock/progress">Progress</a>
-            </div>
-          </div>
-        </div>
-          <a class='nav-item' href="./datapacks">About</a>
-          <a class='nav-item' href="./resoucepacks">Contact</a>
-        </div>
-      </nav>
+
         <script src="" async defer></script>
     </body>
 </html>

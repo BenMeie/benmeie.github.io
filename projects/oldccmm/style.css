@@ -4,7 +4,7 @@
     min-width: 1200px;
 }
 
-.card {
+.ccmmcard {
     position: absolute;
   top: 50%;
   left: 50%;
@@ -43,11 +43,11 @@ html {
     float: right;
     text-align: left;
     font-family: mayden;
-    font-size: 20px;
+    font-size: 15px;
     max-width: 45%;
 }
 
 @font-face {
 	font-family: mayden;
-	src: url(http://blocksanity.net/content/fonts/MadeynSans-Semibold.ttf);
+	src: url(../blocksanity.net/content/fonts/MadeynSans-Semibold.ttf);
 }

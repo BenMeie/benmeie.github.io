@@ -1,73 +1,200 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Web Design Work</title>
-        <meta charset='utf=8' />
-        <style type="text/css">
-            h1 {
-                text-align: center;
-                border-bottom: 2px solid black;
+<head>
+    <!--
+    Ben Meier 2019
+    -->
+    <meta charset='utf-8' />
+    <meta name="viewport" content="width=device-width" />
+    <!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="../../style.css">
+    <link type='text/css' href="portfolio.css" rel='stylesheet'/>
+    <title>Portfolio | Ben Meier</title>
+    <style type='text/css'>
+        div#content figure { display: inline-block; margin: 1.25em 0.5em;
+       width: 130px; height: 130px; color: #eee; border: 3px solid white; border-radius: 10px;
+        }
+
+        div#content figure#invis {border: none;}
+
+        div#content img { width: 100%; /*height: 110px; */
+            margin: 0;}
+
+            div#content figcaption {  font-size: 0.8em;}
+
+        img.icon {
+            transition: 0.5s ease;
+        }
+
+        img.iconb {
+            background-color: white;
+            transition: 0.5s ease;
+        }
+
+        #menu {
+            margin: -7px;
+            background-color: black;
+            text-align: left;
+            padding: 0 10px 0;
+        }
+
+        #menu li{
+            display: inline-block;
+            list-style-type: none;
+        }
+
+        #menu img {
+            width: 35px;
+        }
+
+        @media screen and (max-height: 540px) {
+          div#content figure {
+            width: 100px;
+          }
+            div#content figcaption {
+              font-size: 0.6em;
             }
-            
-            div#content {
-                margin: 0 auto;
-                max-width: 600px;
-            }
-            
-            /*ul {
-                list-style-type: none;
-                overflow: hidden;
-                padding: 5px;
-            }
-            
-            li {
-                float: left;
-                display: inline-block;
-                color: white;
-                text-align: center;
-                padding: 0px 10px
-            }*/
-        </style>
-    </head>
-    <body>
-        <div id="content">
-        <h1>Web Design Links</h1>
-        <ul>
-            <li><a href="first.html">First Webpage</a></li>
-            <li><a href="keyboard.html">Mac Keyboard Shortcuts</a></li>
-            <li><a href="colors.html">Color Harmony</a></li>
-            <li><a href="college.html">College and Career Plans</a></li>
-            <li><a href="Lizards/lizards.html">Floating Lizard Images</a></li>
-            <li><a href="teensVaping/problem_website.html">Teens and Vaping</a></li>
-        </ul>
-        <h1>SVG Links</h1>
-        <ul>
-            <li><a href="first.svg">First SVG</a></li>
-            <li><a href="vennd.svg">Venn Diagram</a></li>
-            <li><a href="h2o.svg">Water Molecule</a></li>
-            <li><a href="benzene.svg">Benzene Molecule</a></li>
-            <li><a href="navi/icons.html">Navigation Icons</a></li>
-            <li><a href="chocolate.svg">Theobromine Molecule</a></li>
-            <li><a href='paths.svg'>Paths and More!</a></li>
-            <li><a href='apple.svg'>Apple Logo</a></li>
-            <li><a href='moreicons/icons.html'>Icons and Logos</a></li>
-            <li><a href='basketball.html'>Basketball</a></li>
-        </ul>
-        <h1>Javascript Links</h1>
-        <ul>
-            <li><a href='tictactoe.html'>Tic Tac Toe Game</a></li>
-            <li><a href='multiplication.html'>Multiplication Table</a></li>
-            <li><a href='zodiac.html'>Chinese Zodiac</a></li>
-            <li><a href='console.html'>Console</a></li>
-            <li><a href='random_colors.html'>Random Color Schemes</a></li>
-            <li><a href='fortune_cookie.html'>Fortunes</a></li>
-            <li><a href='bmi.html'>BMI Calculator</a></li>
-            <li><a href='quad.html'>Quadratic Root Finder</a></li>
-            <li><a href='mpg.html'>MPG Calculator</a></li>
-            <li><a href='resist.html'>Resistor Color Code</a></li>
-            <li><a href='random_circles.html'>Random Circles</a></li>
-            <li><a href='tiles.html'>Random Tiles</a></li>
-        </ul>
+        }
+
+
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Ben Meier</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                <a class="nav-link" href="../">Home</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Projects</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="">Contact</a>
+                </li>
+            </ul>
+            </div>
         </div>
-    </body>
+    </nav>
+
+    <ul id='menu'>
+        <li><a href='https://crazycowmm.com'><img title='Minecraft Portfolio' src='icons/mc-icon.png'/></a></li>
+        <li><a href='https://twitter.com/crazycowmm'><img title='Twitter' src='icons/Twitter_Logo_Blue.svg'/></a></li>
+        <li><a href='https://youtube.com/crazycowmm'><img title='Youtube' src='icons/yt-icon.png'/></a></li>
+        <li><a href='contact.html'><img title='Contact' src='icons/contact.png'/></a></li>
+    </ul>
+    <h1>Mobile App Design Portfolio</h1>
+    <h2>Ben Meier</h2>
+
+    <div id='content'>
+        <figure>
+            <a href="resist.html"><img class='icon' onmouseover='swap(this)' onmouseout='swapb(this)' src='icons/portfolioIcons-01.png' alt='Resistor'/></a>
+            <figcaption>Resistor Calculator</figcaption>
+        </figure>
+        <figure>
+            <a href="bmi.html"><img class='icon' onmouseover='swap(this)' onmouseout='swapb(this)' src='icons/portfolioIcons-02.png' alt='scale'/></a>
+            <figcaption>BMI Calculator</figcaption>
+        </figure>
+        <figure>
+            <a href="basketball2.html"><img class='icon' onmouseover='swap(this)' onmouseout='swapb(this)' src='icons/portfolioIcons-03.png' alt='Basketball'/></a>
+            <figcaption>Bouncing Basketball</figcaption>
+        </figure>
+            <figure>
+            <a href="chocolate.html"><img class='icon' onmouseover='swap(this)' onmouseout='swapb(this)' src='icons/portfolioIcons-04.png' alt='Chocolate bar'/></a>
+            <figcaption>Chocolate Molecule</figcaption>
+        </figure>
+        <p>
+        <figure>
+            <a href="company_logo.html"><img class='icon' onmouseover='swap(this)' onmouseout='swapb(this)' src='icons/portfolioIcons-05.png' alt='vr'/></a>
+            <figcaption>Company Logo</figcaption>
+        </figure>
+        <figure>
+            <a href="icons.html"><img class='icon' onmouseover='swap(this)' onmouseout='swapb(this)' src='icons/portfolioIcons-06.png' alt='Logos'/></a>
+            <figcaption>Company Icons</figcaption>
+        </figure>
+            <figure>
+            <a href="zodiac.html"><img class='icon' onmouseover='swap(this)' onmouseout='swapb(this)' src='icons/portfolioIcons-07.png' alt='Zodiac'/></a>
+            <figcaption>Chinese Zodiac</figcaption>
+        </figure>
+        <figure>
+            <a href="tictactoe.html"><img class='icon' onmouseover='swap(this)' onmouseout='swapb(this)' src='icons/portfolioIcons-09.png' alt='X O'/></a>
+            <figcaption>TicTacToe</figcaption>
+        </figure>
+            </p>
+        <p>
+          <figure>
+              <a href="apple.html"><img class='icon' onmouseover='swap(this)' onmouseout='swapb(this)' src='icons/portfolioIcons-08.png' alt='Apple Logo'/></a>
+              <figcaption>Apple Logo</figcaption>
+          </figure>
+            <figure>
+            <a href="navigation.html"><img class='icon' onmouseover='swap(this)' onmouseout='swapb(this)' src='icons/portfolioIcons-10.png' alt='Apps Icon'/></a>
+            <figcaption>Navigation Icons</figcaption>
+        </figure>
+        <figure>
+            <a href="clock.html"><img class='icon' onmouseover='swap(this)' onmouseout='swapb(this)' src='icons/portfolioIcons-11.png' alt='Clock'/></a>
+            <figcaption>Clock</figcaption>
+        </figure>
+        <figure>
+            <a href="keyboard.html"><img class='icon' onmouseover='swap(this)' onmouseout='swapb(this)' src='icons/portfolioIcons-12.png' alt='Cloverleaf'/></a>
+            <figcaption>Keyboard Shortcuts</figcaption>
+        </figure>
+        </p>
+        <p>
+        <figure>
+            <a href="college.html"><img class='icon' onmouseover='swap(this)' onmouseout='swapb(this)' src='icons/portfolioIcons-13.png' alt='Paper'/></a>
+            <figcaption>Collge Plans</figcaption>
+        </figure>
+            <figure>
+            <a href="problem_website.html"><img class='icon' onmouseover='swap(this)' onmouseout='swapb(this)' src='icons/portfolioIcons-14.png' alt='Apps Icon'/></a>
+            <figcaption>Teens and Vaping</figcaption>
+        </figure>
+        <figure>
+            <a href="resume.html"><img class='icon' onmouseover='swap(this)' onmouseout='swapb(this)' src='icons/portfolioIcons-15.png' alt='Paper'/></a>
+            <figcaption>Resume</figcaption>
+        </figure>
+            <figure id='invis'>
+            <img class='icon' src='icons/invis.png' alt='nothing'/>
+        </figure>
+        </p>
+    </div>
+    <!-- page content will go here -->
+
+    <script type='text/javascript'>
+
+        function swap(e) {
+            var png = e.getAttribute('src').indexOf('.')
+            var indexun = e.getAttribute('src').substring(15, png);
+            var index = parseInt(indexun.substring(indexun.indexOf('-')+1));
+            e.setAttribute('src', "icons/portfolioIcons-" + (index + 15) + ".png")
+            e.className = 'iconb';
+        }
+
+        function swapb(e) {
+            var png = e.getAttribute('src').indexOf('.')
+            var indexun = e.getAttribute('src').substring(15, png);
+            var index = parseInt(indexun.substring(indexun.indexOf('-')+1));
+            if (index > 24)
+                e.setAttribute('src', "icons/portfolioIcons-" + (index - 15) + ".png")
+            else
+                e.setAttribute('src', "icons/portfolioIcons-" + "0"+(index - 15) + ".png")
+            e.className = 'icon';
+        }
+
+
+    </script>
+
+    <footer>Copyright &copy; Ben Meier</footer>
+</body>
 </html>

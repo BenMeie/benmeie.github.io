@@ -135,7 +135,7 @@
 
 .socials {
     padding: 5px 15px 5px 10px;
-    width: 40px;
+    width: 60px;
     float: left
 }
 
@@ -202,7 +202,7 @@ a {
  text-decoration: none;
 }
 
-html {
+body {
   background-image: url("content/images/content/headimg.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -247,14 +247,16 @@ font-size: 40px;
 }
 /* MENU CSS */
 .announce {
-    position: fixed;
-    top: 52px;
+    position: sticky;
+    top: 60px;
     left: 0px;
     width: 100%;
+    z-index: 1;
 }
 
 .menu {
-    position: fixed;
+    position: sticky;
+    z-index: 1;
     top: 0;
     left: 0;
     list-style-type: none;
