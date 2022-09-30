@@ -1,0 +1,101 @@
+@import 'main.css';
+
+nav.main {
+  background-color: #262626;
+  border-bottom: 2px solid #4646FF;
+  position: sticky;
+  top: -10px;
+  width: 100%;
+  padding: 20px 10px 10px 20px;
+  z-index: 100;
+}
+
+div.nav_content a.nav-item {
+  text-decoration: none;
+  margin: 10px 0px 10px 30px;
+  font-size: 20px;
+  color: white;
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+}
+
+
+div.nav_content a#logo {
+  font-size: 30px;
+  color: white;
+  text-decoration: none;
+  font-family: blocked;
+}
+
+nav .nav_content {
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+}
+
+div#right_nav a img {
+  border-radius: 50%;
+  width: 3.5rem;
+  height: 3.5rem;
+  display: block;
+  margin: 0 -20px 0 20px;
+}
+
+nav .nav_content #right_nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-grow: 1;
+  margin-left: 10px;
+}
+
+.dropdown-content {
+  background-color: #262626;
+  border: 1px solid #707070;
+  border-radius: 5px;
+  margin: 10px;
+  width: 100%;
+}
+
+.dropdown-icons {
+  padding: 0 10px 0 5px;
+}
+
+.w {
+  color: rgb(240, 71, 71)
+}
+
+.dropdown-area {
+  display: none;
+  position: absolute;  
+  min-width: 160px;
+  z-index: 1;
+}
+
+.udcontent {
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-content a {
+  font-size: 20px;
+  color: white;
+  font-family: Roboto, sans-serif;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  width: 250px;
+}
+
+.dropdown-content a:hover {background-color: #363636}
+
+.user-dropdown:hover .dropdown-area {
+  display: block;
+}
+
+@font-face {
+  font-family: blocked;
+  src: url('../assets/blocked.ttf') format('truetype');
+  src: url('../assets/Blocked.woff2') format('woff2');
+  src: url('../assets/Blocked.woff') format('woff');
+}

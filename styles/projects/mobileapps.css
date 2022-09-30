@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+span.head {
+                color: white;
+                font-weight: bold;
+            }
+
+div.case_study {
+            margin: 3em auto;
+            width: 600px;
+            text-align: left;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        @media screen and (max-width: 415px) {
+          div.case_study {
+            width: 300px;
+            font-size: 0.9em;
+          }
+          svg {
+            width: 300px;
+            height: 400px;
+          }
+          img {
+            width: 300px;
+          }
+        }
+
+body{
+            text-align: center;
+            font-family: "Futura", sans-serif;
+            background-color: #333;
+            color: #ddd
+        }
+
+footer {
+            color: white;
+            opacity: 0.4;
+            margin: 1.3em;
+        }
+
+        a {
+          color: #99F;
+        }
+
+div#navigation {
+    margin: 0 auto;
+    padding-top: 2em;
+}
+
+div#navigation img {
+    width: 48px;
+    height: 48px;
+    margin: 0 4px;
+    border: 2px solid #666;
+    background-color: #444;
+    padding: 12px;
+    border-radius: 11%;
+    transition: 0.5s ease;
+}
+
+div#navigation img:hover {
+    border: 2px solid #999;
+    background-color: #777;
+    border-radius: 17%;
+}
+
+div#info {
+  width: 100%;
+  position: fixed;
+  bottom: 0%;
+  margin: 0 auto;
+  text-align: center;
+  background-color: black;
+  transition: 2s ease;
+}
+
+div#infog {
+  opacity: 0;
+
+}

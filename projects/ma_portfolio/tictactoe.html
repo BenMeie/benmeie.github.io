@@ -9,7 +9,8 @@
     <meta charset='utf-8' />
     <meta name="viewport" content="width=device-width" /> 
     <title>Tic Tac Toe</title>
-    <link type='text/css' href="portfolio.css" rel='stylesheet'/>
+    <link type='text/css' href="/styles/projects.css" rel='stylesheet'/>
+    <link type='text/css' href="/styles/projects/mobileapps.css" rel='stylesheet'/>
     <script type='text/javascript' src='nav.js'></script>
     <style type='text/css'>
         
@@ -94,10 +95,31 @@
 </head>
 
 <body>
+    
+    <nav class="mainNav">
+        <ul class="navList">
+            <li class="navItem">
+                <p class="navBrand">Ben Meier</p>
+            </li>
+            <li class="navItem">
+                <a class="navLink" href="/">Home</a>
+            </li>
+            <li class="navItem">
+                <a class="navLink  navLinkSelected" href="/projects/">Projects</a>
+            </li>
+            <li class="navItem">
+                <a class="navLink" href="about">About</a>
+            </li>
+            <li class="navItem">
+                <a class="navLink" href="contact">Contact</a>
+            </li>
+        </ul>
+    </nav>
+
     <h1>Tic Tac Toe</h1>
     <!-- page content will go here -->
     <div>
-        <button id='xwins'>&nbsp;</button><button id='owins'>&nbsp;</button
+        <button id='xwins'>&nbsp;</button><button id='owins'>&nbsp;</button>
     </div><br>
     <button id='info'>X, it's your turn!</button>
     <div id='board'>
