@@ -1,0 +1,27 @@
+@import '/styles/global.css';
+
+.journalEntry {
+    width: 60%;
+    margin: 0 auto;
+    font-family: 'Lato', sans-serif;
+    background-color: #f6f6f6;
+    border-radius: 10px;
+    padding: 35px;
+}
+
+.journalTitle {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    margin-bottom: 0px;
+}
+
+.journalDate {
+    font-weight: 200;
+    color: #aaa;
+}
+
+.journalImage {
+    width: 75%;
+    display: block;
+    margin: 10px auto;
+}
