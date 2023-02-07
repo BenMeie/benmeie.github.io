@@ -1,7 +1,7 @@
 @import '/styles/global.css';
 
 .journalEntry {
-    width: 60%;
+    width: 50%;
     margin: 0 auto;
     font-family: 'Lato', sans-serif;
     background-color: #f6f6f6;
@@ -24,4 +24,16 @@
     width: 75%;
     display: block;
     margin: 10px auto;
+    box-shadow: 2px 5px 15px #777;
+}
+
+.imgCaption {
+    font-weight: 200;
+    color: #777;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+figure {
+    margin: 25px 0 25px 0;
 }
