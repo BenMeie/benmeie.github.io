@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Ben Meier | Projects</title>
+       
+        <link rel="stylesheet" type="text/css" href="/styles/projects/journal.css">
+    </head>
+    <body>
+        <nav class="mainNav">
+            <ul class="navList">
+                <li class="navItem">
+                    <p class="navBrand">Ben Meier</p>
+                </li>
+                <li class="navItem">
+                    <a class="navLink navLinkSelected" href="/">Home</a>
+                </li>
+                <li class="navItem">
+                    <a class="navLink" href="/projects">Projects</a>
+                </li>
+                <li class="navItem">
+                    <a class="navLink" href="/about">About</a>
+                </li>
+                <li class="navItem">
+                    <a class="navLink" href="/contact">Contact</a>
+                </li>
+            </ul>
+        </nav>
+        <main>
+            <div class="journalEntry">
+                <h1 class="journalTitle">Sphere Raycast</h1>
+                <p class="journalDate">2/9/2023</p>
+                <div class="journalBody">
+                    <p>
+                        I learned 3 very important things from this lesson, but not all of them have to do with the math. The most important of those being that vectors can basically be used in normal math without any problem. Along with this came a lot more experience working with vectors in a math sense than I've ever had previously and I think I'm a looot more comfortable with them than I was just last week. The second most important thing was the value of the debugger oh man. I've also been a bit of a console log to debug kind of guy but using the debugged was vital and extremly helpful in this assignment. Walking through the math step by step with the debugger and then following it by hand helped me work out pretty much every bug I had in the program. 
+                        <figure>
+                            <img class="journalImage" src="/assets/journals/wayBig.png">
+                            <figcaption class="imgCaption">The debugger saved me so many times during this project!</figcaption>
+                        </figure>
+                        The final thing I took away from this project was not to be afraid of a formula. The project seemed really daunting at first, we were using a formula I kind of hate to begin with but then we're using vectors instead of variables. It felt like an almost impossible task. But I just started, first by writing the equation in plain math, then slowly converting it bit by bit into code. As a side note, this was one of the few times I've used pen and paper to help debug a program to such great sucess, definitly something I will need to do again in the future. 
+                    </p>
+                    <p>  
+                        Suprisingly I found that once I got started this porject was a lot easier than the first vector one. Maybe it was because I had a very solid idea of what I needed the program to do, and had a way to represent that on paper, and I just need to convert it to code. The one thing I'm still a little unsure on is what exactly the normal we were returning is and why it seemed to be just the hitpoint - center normalized. What is it for, is that actually the correct way to get it, stuff like that.
+                    </p>
+                    <figure>
+                        <img class="journalImage" src="/assets/journals/whooo.png">
+                        <figcaption class="imgCaption">Who ARE you!?</figcaption>
+                    </figure>
+                    <p>The biggest problem I had with this project was converting the written formula into something that correctly used the vector methods in order to do the same thing. I had a huge inital issue in my code in which I forgot that the subtract method actually modified the original vector and I was calling it repeatedly on r1. Whoops! Something I didn't and still don't really understand is the normal, but Shane helped me work through that and ended up coming up with the final solution used in the completed project. It was pretty fun going through the code after I knew the main math was working and adding various exceptions for things like when the ray is in the circle, or if the circle is actually behind the ray.
+                    </p>
+                    <figure>
+                        <img class="journalImage" src="/assets/journals/mistakeTime.png">
+                        <figcaption class="imgCaption">Revel in my mistakes</figcaption>
+                    </figure>
+                    <p>We definitely worked together a lot better this time. Unfortunatly I hadn't realized that the project was going to be just the raycast function, so I had started that before we met, but the majority of the project we did together on a zoom call. It definitly feels like he has a better understand of vectors generally whereas I'm better at solving issues in the program, which turned out quite nicely for this project. As I mentioned above, I thought this project was actually a bit easier than the first vectors one, so I didn't find the TA or office hours necessary.
+                    </p>
+                    <figure>
+                        <img class="journalImage" src="/assets/journals/homer2.png">
+                        <figcaption class="imgCaption">Homer is back at it again</figcaption>
+                    </figure>
+                </div>
+            </div> <!-- journalEntry -->
+        </main>
+        <footer>
+            © Ben Meier 2023
+        </footer>
+
+        <script type="text/javascript" src="script.js"></script>
+    </body>
+</html>
