@@ -32,46 +32,67 @@
                 <h1 class="journalTitle">Raytracer</h1>
                 <p class="journalDate">02/25/2023</p>
                 <div class="journalBody">
-                    <p></p>
+                    <p>
+                            What are the 3 biggest takeaways you got from this module?
+Raytracing is... really hard. But also not as bad as I thought it would be! I really should have been writting this journal throughout the experience but unfortunately I find myself here at the end with only screenshots and videos as evidence of my trials. One of the things I struggled with the most in this project was figuring out where rays are coming from, where they should be going to, and how to get them to actually do that. I was able to complete the simple ball and light fairly easily but when we started adding lights and shadows that's when things went wrong. 
+                    </p>
+                    <p>
+                        I feel like a lot of part 1 of this project was getting down formulas and coping code from the document, so I didn't have too much trouble here and thus don't think I really expanded my understanding very much. Working with the lighting gave me a lot more experience (and thus a lot more understanding) with creating rays between two points, as this was the main hold up with the lighting issues I had. I also think it helped a little bit with my spacial reasoning, but I feel that part 2 was much more effective in that regard. 
+                    </p>
                     <figure>
                         <img class="journalImage" src="/assets/journals/raytracer/horizon.png">
-                        <figcaption class="imgCaption">Image</figcaption>
+                        <figcaption class="imgCaption">This interesting image happened when I accidentally applied the plane's lighting to the sphere's y level</figcaption>
                     </figure>
                     <figure>
                         <img class="journalImage" src="/assets/journals/raytracer/coneOfLight.png">
-                        <figcaption class="imgCaption">Image</figcaption>
+                        <figcaption class="imgCaption">Going to be honest, don't know how this happened</figcaption>
                     </figure>
                     <figure>
                         <img class="journalImage" src="/assets/journals/raytracer/ripPlane.png">
-                        <figcaption class="imgCaption">Image</figcaption>
+                        <figcaption class="imgCaption">And now we've lost the plane</figcaption>
                     </figure>
+                    <p>
+                        Once I had the basic lighting figured animating the light wasn't too big of a deal (although I made it waaay too fast at first). I actually did all of this work before part 2, so I had a little bit of fun figuring out how to animate the light myself and ended up with a very similar solution to how it was done in part 2.
+                    </p>
                     <figure>
                         <video class="journalImage" src="/assets/journals/raytracer/fastLight.mov" controls autoplay muted loop></video>
-                        <figcaption class="imgCaption">Video</figcaption>
+                        <figcaption class="imgCaption">Oops@</figcaption>
                     </figure>
                     <figure>
                         <video class="journalImage" src="/assets/journals/raytracer/rotatingLight.mov" controls autoplay muted loop></video>
-                        <figcaption class="imgCaption">Video</figcaption>
+                        <figcaption class="imgCaption">Final result for part 1!</figcaption>
                     </figure>
+                    <p>
+                        This was an issue that my partner ended up having when he was implementing the eyeDistance part of the project. While helping him I copied it over to my work and it ended up creating this effect that I thought was pretty neat so I recorded it. 
+                    </p>
                     <figure>
                         <video class="journalImage" src="/assets/journals/raytracer/searchlight.mov" controls autoplay muted loop></video>
-                        <figcaption class="imgCaption">Video</figcaption>
+                        <figcaption class="imgCaption">Lighthouse anyone?</figcaption>
                     </figure>
+                    <p>
+                        Unfortunately I don't have any videos from when I was implementing the shadows even though that was the part that taught me the most in this project. Admittedly most of the problems just made shadows not appear at all so maybe there wasn't really anything worth recording. I spent the majority of my time in part 2 on getting the shadows to work correctly and had the most trouble figuring out how to get a ray that went from where the previous ray hit, to the light source, and then figuring out how to use that to raycast through all the objects it might have potentially hit. At first I had a ray that simply started at the previous rays ending position and then had it's direction as the position of the light source but obviously that didn't work. By completing the shadows I feel like I understand how rays (and vectors) work in actual space a lot better. The shadows were a collaborative effort between me and my partner which I feel like really helped the both of us as we were able to bounce ideas off of eachother and discuss how the whole thing should look. I was also able to later get in a call with my partner and we spent a pretty good amount of time trying to diagnose this really irritating issue he was having with his color code. 
+                    </p>
+                    <p>
+                        For the extra cherry on top I tried implementing the anti-aliasing algorithm discussed in the video at the end of the document and the following videos are my trials and tribulations with that. I wasn't able to get any sort of shape edge detection working so in the final project it currently applies anti-aliasing to every pixel so I had to make the area smaller so it wasn't super laggy. In the first couple of videos I was having a very hard time with this strange transparency bug where my colors wern't being added together correctly, still kinda looked neat though. 
+                    </p>
                     <figure>
                         <video class="journalImage" src="/assets/journals/raytracer/transparent.mov" controls autoplay muted loop></video>
-                        <figcaption class="imgCaption">Video</figcaption>
+                        <figcaption class="imgCaption">It's like glass! But I really don't want it to be</figcaption>
                     </figure>
                     <figure>
                         <video class="journalImage" src="/assets/journals/raytracer/transparentAndbigLine.mov" controls autoplay muted loop></video>
-                        <figcaption class="imgCaption">Video</figcaption>
+                        <figcaption class="imgCaption">And now we have a line down the middle cooool</figcaption>
                     </figure>
                     <figure>
                         <video class="journalImage" src="/assets/journals/raytracer/manyLines.mov" controls autoplay muted loop></video>
-                        <figcaption class="imgCaption">Video</figcaption>
+                        <figcaption class="imgCaption">Oh just great now we have a line down the middle AND a line down the horizon just what I was hoping for</figcaption>
                     </figure>
+                    <p>
+                        In the end the biggest problem I had with the anti-aliasing ended up being a silly mistake I had made in for loop that was causing me to loop through the scene using the wrong index. It's always the simple things :(. I also ended up making the shadows additive rather than just pure black in the final result and I though it looked pretty good!
+                    </p>
                     <figure>
                         <video class="journalImage" src="/assets/journals/raytracer/result.mov" controls autoplay muted loop></video>
-                        <figcaption class="imgCaption">Video</figcaption>
+                        <figcaption class="imgCaption">The final result!</figcaption>
                     </figure>
                 </div>
             </div> <!-- journalEntry -->
