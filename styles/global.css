@@ -70,3 +70,11 @@ html, body {
     background-color: #c5c5c5;
     transition: background-color 0.2s ease;
   }
+
+  footer {
+    padding: 20px;
+    background-color: #f6f6f6;
+    margin: 20px 0 0 0;
+    width: 100%;
+    font-family: 'Lato', sans-serif;
+  }
