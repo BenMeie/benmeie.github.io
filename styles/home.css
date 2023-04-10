@@ -9,11 +9,19 @@
     background-color: black;
   }
   
-  .splash img {
+  .splash .splashHalf img {
     width: 100%;
-    height: auto;
+    height: 500px;
     transition: 0.2s ease;
     opacity: 0.6;
+    object-fit: cover;
+  }
+
+  .splash .splashHalf {
+    margin: 0;
+    padding: 0;
+    width: 49.8%;
+    display: inline-block;
   }
   
   .splashText {
@@ -32,25 +40,4 @@
 
   .splashText h2 {
     font-size: 1.5rem;
-  }
-
-  .archiveDownloadCards {
-    margin: 0 auto;
-    width: 50%;
-  }
-
-  .archiveDownloadCard {
-    max-width: 1000px;
-  }
-
-  .archiveCardImageContainer {
-    overflow: hidden;
-  }
-
-  .archiveImg {
-    min-width: 300px;
-  }
-
-  .body {
-    margin: 20px 20px;
   }

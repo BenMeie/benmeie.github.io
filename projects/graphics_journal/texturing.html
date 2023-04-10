@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Ben Meier | Projects</title>
+       
+        <link rel="stylesheet" type="text/css" href="/styles/projects/journal.css">
+    </head>
+    <body>
+        <nav class="mainNav">
+            <ul class="navList">
+                <li class="navItem">
+                    <p class="navBrand">Ben Meier</p>
+                </li>
+                <li class="navItem">
+                    <a class="navLink navLinkSelected" href="/">Home</a>
+                </li>
+                <li class="navItem">
+                    <a class="navLink" href="/projects">Projects</a>
+                </li>
+<li class="navItem">
+                    <a class="navLink" href="/minecraft">Minecraft</a>
+                </li>
+                <li class="navItem">
+                    <a class="navLink" href="/about">About</a>
+                </li>
+                <li class="navItem">
+                    <a class="navLink" href="/contact">Contact</a>
+                </li>
+            </ul>
+        </nav>
+        <main>
+            <div class="journalEntry">
+                <h1 class="journalTitle">Texturing in WebGL</h1>
+                <p class="journalDate">04/10/2023</p>
+                <div class="journalBody">
+                    <p>Surprisingly to me, getting texturing working in WebGL was actually fairly easy. I didn't have any major hiccups while working on the main project and the only real problems I encountered where during the extra credit portion of the assignment. I don't think the spring break did any good for my familiarity with WebGL though. Coming back to coding it felt like almost like working in a foreign language again. I'm so thankful documentation exists.</p>
+                    <p>The biggest problem I did have on the main portion of the project was getting my sorting for the painters algorithm to work, although it turned out in the end that the issue was with how I was getting the objects position not with how I was sorting. Even so it was fun finally reading up on how javascript array sorting actually works. I've seen the method a lot but I've never had to use it to make my own sorting function so that was fun. The algorithm itself was actually surprisingly simple. I feel like I always get this sense of dread when I hear the word algorithm so it was nice to know that all I really had to was sort the objects by distance.</p>
+                    <figure>
+                        <video class="journalImage" src="/assets/journals/texturingAddMistake.mov" controls autoplay muted loop></video>
+                        <figcaption class="imgCaption">When I was messing around with making the texture move with time I forgot to actually add in the original texture coordinate so everything ended up being these flashing colors.</figcaption>
+                    </figure>
+                    <p>The part I spent the most time on was getting mipmaps to work, but as usual this was mostly because of my own mistake rather than anything actually being very complicated. Initially I had the <pre>gl.generateMipmap</pre> method running before I was running <pre>gl.texImage2D</pre> This was causing WebGL to throw an error saying that my texture format was not a valid format that could be made into a mipmap. I had placed the code in that order because the comment above texImage2D said that it was sending the image off the WebGL to be processed, and obviously I wanted to make the mipmaps and apply filtering before the texture was sent to be rendered. After digging through the WebGL spec and asking ChatGPT what the heck was going on I eventually took a hard enough look at my code to realize that texImage2D wasn't removing my texture from the buffer it was just creating it and putting it in the right place. Obviously you can't make a mipmap out of a texture that hasn't been created yet.  </p>
+                    <figure>
+                        <img class="journalImage" src="/assets/journals/texturingMipMap.png">
+                        <figcaption class="imgCaption">At least it's not blue balls?</figcaption>
+                    </figure>
+                    <p>As I mentioned above I did end up going through the WebGL spec and I used the mdn docs quite a bit throughout this project. My partner had also finished his work before me and so I was able to compare what we had done when I was really stuck. Luckily, as this was a pretty simple assignment neither of us had too many problems as far as I'm aware and so we didn't need too much help from each other. I think a lot of this module was just reinforcing stuff that we had learned before. Applying textures isn't all that different from how we did colors or anything like that. It was really neat to learn the actual meaning behind a lof the terms I've seen so many times in video game settings. Also now I get how to pronounce anisotropic haha!</p>
+                    <figure>
+                        <video class="journalImage" src="/assets/journals/texturingFinal.mov" controls autoplay muted loop></video>
+                        <figcaption class="imgCaption">The Final Result</figcaption>
+                    </figure>
+                </div>
+            </div> <!-- journalEntry -->
+        </main>
+        <footer>
+            © Ben Meier 2023
+        </footer>
+
+        <script type="text/javascript" src="script.js"></script>
+    </body>
+</html>

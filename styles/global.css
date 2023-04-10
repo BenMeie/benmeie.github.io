@@ -78,3 +78,16 @@ html, body {
     width: 100%;
     font-family: 'Lato', sans-serif;
   }
+
+  footer .socialGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    margin: 25px 15px;
+    width: 10%;
+  }
+
+  footer .socialGrid .socialIcon img {
+    width: 35px;
+    height: auto;
+  }
