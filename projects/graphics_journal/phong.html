@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Ben Meier | Projects</title>
+       
+        <link rel="stylesheet" type="text/css" href="/styles/projects/journal.css">
+    </head>
+    <body>
+        <nav class="mainNav">
+            <ul class="navList">
+                <li class="navItem">
+                    <p class="navBrand">Ben Meier</p>
+                </li>
+                <li class="navItem">
+                    <a class="navLink navLinkSelected" href="/">Home</a>
+                </li>
+                <li class="navItem">
+                    <a class="navLink" href="/projects">Projects</a>
+                </li>
+<li class="navItem">
+                    <a class="navLink" href="/minecraft">Minecraft</a>
+                </li>
+                <li class="navItem">
+                    <a class="navLink" href="/about">About</a>
+                </li>
+                <li class="navItem">
+                    <a class="navLink" href="/contact">Contact</a>
+                </li>
+            </ul>
+        </nav>
+        <main>
+            <div class="journalEntry">
+                <h1 class="journalTitle">Phong is a Cool Guy</h1>
+                <p class="journalDate">4/24/2023</p>
+                <div class="journalBody">
+                    <p>Hey! We got lighting that doesn't cost us an arm and a leg that's pretty cool! These past two weeks assignments to get lighting working in WebGL haven't been nearly as bad as I thought they were going to be and I mostly ended up struggling with sort of unrelated issues in the assignments. In the first part of the assignment I had a couple of issues with the reflection vector that caused specular highlights to not show up on the plane, even though they did correct appear on the sphere. I got a little bit of help from <a href="https://learnopengl.com/Lighting/Basic-Lighting">Learn OpenGL</a> to fix up the formula and then completed the assignment. Unfortunately, like a fool, I forgot to record any video of any of the issues I had so I don't remember the specifics.</p>
+                    <p>The second part of the assignment also went quite well, although I did have a little bit of trouble changing the shader to use the light position instead of the direction. Initially I had it in my head, for some reason, that in order to get a vector that goes from one point to another you just do to - from. Obviously that's reversed but it took a bit of looking around to figure out wha was going wrong with that one.</p>
+                    <figure>
+                        <video class="journalImage" src="/assets/journals/phong/directionMixup.mov" controls autoplay muted loop></video>
+                        <figcaption class="imgCaption">Interestingly, mixing up the light direction made light appear only on the bottom of the plane.</figcaption>
+                    </figure>
+                    <p>Once I figured that out, it was smooth sailing until we got to adding the new, unshaded, geometry to the light position. I had a lot more trouble with this than I really should have, mainly because I tried to take the easy way out which led to things getting all messed up and becoming even more complicated. To begin with I accidentally overrode the entire world matrix into just a translation to the light position. The I tried to do something hacky to just add the light rotation onto an already setup world matrix to avoid reapplying the scale and translation. By this point I was pretty deep down in a rabbit hole so I deleted pretty much the whole thing and just started over. All in all it wasn't that big of a problem but it really shouldn't have taken me as long as it did. My brain was too full of Game Dev stuff I guess haha.</p>
+                    <figure>
+                        <img class="journalImage" src="/assets/journals/phong/tinyBarrel.png">
+                        <figcaption class="imgCaption">Oops, barrel very too small!</figcaption>
+                    </figure>
+                    <figure>
+                        <video class="journalImage" src="/assets/journals/phong/insideTheSphere.mov" controls autoplay muted loop></video>
+                        <figcaption class="imgCaption">I made a weird skybox!</figcaption>
+                    </figure>
+                    <figure>
+                        <video class="journalImage" src="/assets/journals/phong/theSphereFloatsAway.mov" controls autoplay muted loop></video>
+                        <figcaption class="imgCaption">Oh... goodbye I guess</figcaption>
+                    </figure>
+                    <figure>
+                        <video class="journalImage" src="/assets/journals/phong/heGrewSpikes.mov" controls autoplay muted loop></video>
+                        <figcaption class="imgCaption">While trying to figure stuff out I reset the sphere back to the middle and then made it a bit bigger so I could see it.</figcaption>
+                    </figure>
+                    <figure>
+                        <video class="journalImage" src="/assets/journals/phong/final.mov" controls autoplay muted loop></video>
+                        <figcaption class="imgCaption">The End</figcaption>
+                    </figure>
+                    <p>My partner and I worked ok for this project. I think we both had a fairly strong understanding of the material so there wasn't too much back and forth but we did help each other out a little bit. I ended up doing most of the work for both assignments in class after they were assigned so I was able to provide some nice hints and information about how I went about doing the todos. I didn't end up needing to go to any office hours, although as mentioned above I did seek out a couple additional resources for getting my specular function right. </p>
+                </div>
+            </div> <!-- journalEntry -->
+        </main>
+        <footer>
+            © Ben Meier 2023
+        </footer>
+
+        <script type="text/javascript" src="script.js"></script>
+    </body>
+</html>
