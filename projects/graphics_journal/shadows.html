@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Ben Meier | Projects</title>
+       
+        <link rel="stylesheet" type="text/css" href="/styles/projects/journal.css">
+    </head>
+    <body>
+        <nav class="mainNav">
+            <ul class="navList">
+                <li class="navItem">
+                    <p class="navBrand">Ben Meier</p>
+                </li>
+                <li class="navItem">
+                    <a class="navLink navLinkSelected" href="/">Home</a>
+                </li>
+                <li class="navItem">
+                    <a class="navLink" href="/projects">Projects</a>
+                </li>
+<li class="navItem">
+                    <a class="navLink" href="/minecraft">Minecraft</a>
+                </li>
+                <li class="navItem">
+                    <a class="navLink" href="/about">About</a>
+                </li>
+                <li class="navItem">
+                    <a class="navLink" href="/contact">Contact</a>
+                </li>
+            </ul>
+        </nav>
+        <main>
+            <div class="journalEntry">
+                <h1 class="journalTitle">Chad-ows</h1>
+                <p class="journalDate">5/1/2023</p>
+                <div class="journalBody">
+                    <p>Heyyo. This entry is going to be rather short, because I managed to do the whole assignment in between graphics and game dev on the day it was assigned but I still have some interesting thoughts about how we managed shadows. Rendering shadows is kind of funky. The way we use the light like a second camera to 'raycast' to all the objects it can see first before actually rendering the scene is really neat. I had no idea WebGL could even handle multiple render passes so that was a cool introduction to that idea, and it's made me think about other cool things you might be able to do by rendering something first to a file and then using that to influence the final render. I would have assumed that the computers file system was not quite fast enough to handle an image per frame, but I guess not. </p>
+                    <p>Overall I had a pretty easy time understanding how shadows work. We're just using the light position to save a depth map of all of the closest objects to that light. Then in the next pass we first manipulate our current point into the lights perspective using the same code we use to do the same thing with the camera, and then we can check that point against the depth map to see if your current position is closer/equal to or farther away than the depth in the depth map. if it's closer or equal then that object is not in shadow. If it's farther than we know that object is behind some other object so it must be in shadow. </p>
+                    <figure>
+                        <img class="journalImage" src="/assets/journals/addBiasInsteadOfsubtract.png">
+                        <figcaption class="imgCaption">I accidentally added the bias instead of subtracting it at first, causing basically everything to be in shadow.</figcaption>
+                    </figure>
+                    <p>Since I was able to complete this assignment fairly quickly I didn't end up needing any help from the TA or professor. However, also since I finished it so early I was able to help my partner with a couple aspects they were having trouble with regarding getting the correct UV coordinates in the shadow map and what that meant exactly. I think my best advice to anyone having trouble is to not think about it too hard. This is all stuff we've done quite a few times before, just applied in a slightly different way. Don't get too hung up and the newness of it all.</p>
+                    <figure>
+                        <video class="journalImage" src="/assets/journals/shadowsFinal.mov" controls autoplay muted loop></video>
+                        <figcaption class="imgCaption">The Final Result!</figcaption>
+                    </figure>
+                    <p>I think I sorted of hinted at it above, but my biggest challenge was probably just trying to apply all the concepts we've already learned in a new way. One of the reasons why I was able to get this done so quickly was because I didn't doubt myself or that I knew what I was doing. Obviously, having the guide and most everything already set up for us helped a lot, but I think my biggest takeaway from this assignment is just that you should probably approach stuff like this with confidence and not spend too much time thinking about how something might go wrong. It's often much easier to actually fix things once you can see them, and overthinking never helps anyone as far as I know.</p>
+                </div>
+            </div> <!-- journalEntry -->
+        </main>
+        <footer>
+            © Ben Meier 2023
+        </footer>
+
+        <script type="text/javascript" src="script.js"></script>
+    </body>
+</html>
