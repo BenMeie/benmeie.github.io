@@ -77,14 +77,15 @@ html, body {
     margin: 20px 0 0 0;
     width: 100%;
     font-family: 'Lato', sans-serif;
+    text-align: center;
   }
 
   footer .socialGrid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 10px;
-    margin: 10px 15px;
-    width: 5%;
+    margin: 10px auto;
+    width: fit-content;
   }
 
   footer .socialGrid .socialIcon img {
