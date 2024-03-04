@@ -17,11 +17,13 @@
     object-fit: cover;
   }
 
+  .splashBackground {
+    display: flex;
+  }
+
   .splash .splashHalf {
     margin: 0;
     padding: 0;
-    width: 49.8%;
-    display: inline-block;
   }
   
   .splashText {

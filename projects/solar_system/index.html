@@ -27,18 +27,13 @@
 <link rel="shortcut icon" href="">
 
 <link rel="stylesheet" type="text/css" href="/styles/projects.css">
+<link rel="stylesheet" type="text/css" href="/styles/projects/journal.css">
 
 <style>
     /* center the canvas on the screen */
     #webgl-canvas {
         border: solid;
         display: block;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        margin: auto;
     }
 </style>
 </head>
@@ -66,7 +61,28 @@
             </li>
         </ul>
     </nav>
-    <canvas id="webgl-canvas" width="1280" height="720"></canvas>
+    <main>
+        <div class="journalEntry">
+            <h1 class="journalTitle">Ghost Hunter Inc</h1>
+            <div class="journalBody">
+                <p>A solar system built in WebGL from scratch. Utilizing Phong and point lighting, textures and shaders. This project is the culmination of techniques learned in the WebGL Programming Journal.</p>
+                <h2>
+                    Tools
+                </h2>
+                <p>
+                    <ul>
+                        <li>WebGL</li>
+                        <li>Javascript</li>
+                        <li>GLSL</li>
+                    </ul>
+                </p>
+                <canvas id="webgl-canvas" width="1280" height="720"></canvas>
+            </div>
+        </div> <!-- journalEntry -->
+    </main>
+    <footer>
+        © Ben Meier 2023
+    </footer>
 </body>
 
 </html>

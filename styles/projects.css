@@ -16,6 +16,7 @@
     border-bottom: 1px solid #dddddd;
     margin: 5px 0 5px -5px;
     padding: 5px;
+    font-weight: bold;;
 }
 
 .cardGrid {
@@ -60,10 +61,19 @@
 }
 
 .card_img {
-    min-width: 270px;
     width: 90%;
-    margin: 10px auto 5px 5%;
+    margin: 10px auto;
+    overflow: hidden;
+}
+
+.card_img img {
+    width: 100%;
+    height: 100%;
+    max-height: 300px;
     border-radius: 15px;
+    overflow: hidden;
+    object-fit: cover;
+    object-position: 0% 20%;
 }
 
 /* video {
